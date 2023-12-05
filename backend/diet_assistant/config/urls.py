@@ -5,8 +5,8 @@ from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import include, path
 
-from diet_assistant.utils.views import OpenAPISchemaView, ReDocView
 from diet_assistant.utils.exceptions import handlers
+from diet_assistant.utils.views import OpenAPISchemaView, ReDocView
 
 urlpatterns = [
     path("healthz/", include("health_check.urls")),

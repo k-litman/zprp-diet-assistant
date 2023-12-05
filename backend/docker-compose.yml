@@ -1,7 +1,5 @@
 version: '3.8'
 
-# Volumes for Postgres DB files and Django media. You can delete these using
-# `docker volume rm` if you want to wipe your database/media.
 volumes:
   postgresql-data:
   app-media:

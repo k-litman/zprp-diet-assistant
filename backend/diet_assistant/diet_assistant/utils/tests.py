@@ -1,12 +1,13 @@
 """
 Test for the utils app.
 """
-import pytest
-
 from django.core.exceptions import PermissionDenied
 from django.http import Http404
 
+import pytest
+
 from rest_framework import serializers
+
 from diet_assistant.utils.exceptions.api_errors import DomainAPIError
 from diet_assistant.utils.exceptions.handlers import drf_error_handler
 

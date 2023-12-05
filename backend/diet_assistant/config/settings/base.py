@@ -120,6 +120,7 @@ LOCAL_APPS = [
     # Custom users app
     "diet_assistant.users.apps.UsersConfig",
     # Your stuff: custom apps go here
+    "diet_assistant.diet_plans.apps.DietPlansConfig",
 ]
 
 # See: https://docs.djangoproject.com/en/dev/ref/settings/#installed-apps
