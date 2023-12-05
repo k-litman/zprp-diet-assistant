@@ -1,0 +1,29 @@
+User:
+  type: object
+  properties:
+    username:
+      type: string
+      description: User's username, must be unique
+      example: johnwick
+    email:
+      type: string
+      format: email
+      description: User's email
+      example: johnwick@microsoft.com
+    first_name:
+      type: string
+      description: Users's first name
+      example: John
+    last_name:
+      type: string
+      description: User's last name
+      example: Wick
+  required:
+    - username
+    - email
+
+UserList:
+  type: array
+  items:
+    $ref: '#/User'
+

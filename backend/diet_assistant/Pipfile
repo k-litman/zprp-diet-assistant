@@ -1,0 +1,136 @@
+[[source]]
+url = "https://pypi.python.org/simple"
+verify_ssl = true
+name = "pypi"
+
+[requires]
+python_version = '3.11'
+
+[packages]
+# Django
+django = "~=4.1.0"
+
+# HTTP for Humans
+requests = "*"
+
+# Configuration
+environs = {version = "~=9.3.5", extras=["django"]}
+
+# Models
+django-model-utils = "~=4.2.0"
+
+# Password storage
+argon2-cffi = "~=21.3.0"
+
+# Health check
+django-health-check = "~=3.17.0"
+
+# Python-PostgreSQL Database Adapter
+psycopg2-binary = "~=2.9.5"
+
+# Unicode slugification
+python-slugify = "~=6.1.0"
+
+# Time zones support
+pytz = "*"
+
+# Redis support for cache and celery
+django-redis = "~=5.2.0"
+redis = "~=4.3.0"
+
+# Celery
+celery = "~=5.2.0"
+
+# Powerful and flexible toolkit for building Web APIs
+djangorestframework = "~=3.14.0"
+
+# Python implementation of Markdown for DRF
+Markdown = "~=3.4.0"
+
+# Reusable app for filter querysets dynamically
+django-filter = "~=22.1"
+
+# API documentation
+prance = "~=0.21.8"
+openapi-spec-validator = "~=0.2.0"
+
+# Django storage in AWS S3
+django-storages = {version = "~=1.13.0", extras = ["boto3"]}
+
+# Exports Django monitoring metrics for Prometheus.io
+django-prometheus = "~=2.2.0"
+
+# Adds CORS headers to responses
+django-cors-headers = "~=3.13.0"
+
+# Production web server
+gunicorn = "~=20.1.0"
+
+# Serving static files in production
+whitenoise = "~=6.2.0"
+
+# Health check memory and CPU usage
+psutil = "~=5.9.0"
+
+# Sentry SDK client
+sentry_sdk = "~=1.10.0"
+
+# Your custom base dependencies do below this line
+# ----------------------------------------------------------------------------
+
+
+#------------------------- DEV DEPENDENCIES START HERE -----------------------
+[dev-packages]
+
+# WSGI utility library for Python
+Werkzeug = "~=2.2.0"
+
+# Collection of useful extensions
+django-extensions = "~=3.2.0"
+
+# Code coverage
+coverage = "~=6.5.0"
+
+# create model fixture
+factory-boy = "~=3.2.0"
+
+# best testing framework
+pytest = "~=7.2.0"
+
+# pytest plugin produces coverage reports
+pytest-cov = "~=4.0.0"
+
+# testing django with pytest
+pytest-django = "~=4.5.0"
+
+# distributed testing and loop-on-failing modes
+pytest-xdist = "~=3.0.0"
+
+# changes the default look test results
+pytest-sugar = "~=0.9.6"
+
+# pytest plugin for mock module
+pytest-mock = "~=3.10.0"
+
+# pytest plugin for factoryboy
+pytest-factoryboy = "~=2.5.0"
+
+# very useful toolbar for debugging project
+django-debug-toolbar = "~=3.7"
+
+# very easy request mock
+requests-mock = "~=1.10.0"
+
+# code audit tools
+flake8 = "~=5.0.0"
+isort = "~=5.10.0"
+black = "~=22.10.0"
+
+# Mypy and stubs
+mypy = ">=0.790"
+django-stubs = ">=1.7.0"
+djangorestframework-stubs = ">=1.3.0"
+boto3-stubs = "*"
+
+# Your custom dev dependencies go below this line
+# ----------------------------------------------------------------------------

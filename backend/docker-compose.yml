@@ -1,0 +1,81 @@
+version: '3.8'
+
+# Volumes for Postgres DB files and Django media. You can delete these using
+# `docker volume rm` if you want to wipe your database/media.
+volumes:
+  postgresql-data:
+  app-media:
+
+services:
+  db:
+    image: postgres:13.8
+    volumes:
+      - postgresql-data:/var/lib/postgresql/data
+    env_file:
+      - .env
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U backend" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
+  app: &app
+    user: "${UID:-1000}"
+    container_name: diet-assistant-app
+    build:
+      network: host
+      context: .
+      dockerfile: ./docker/Dockerfile
+      args:
+        DEV_MODE: "1"
+        USER_ID: "${UID:-1000}"
+    command: "/start-runserver.sh"
+    ports:
+      - "8000:8000"
+    depends_on:
+      db:
+        condition: service_healthy
+    env_file:
+      - .env
+    volumes:
+      - ./diet_assistant:/app
+      - app-media:/media
+  redis:
+    image: redis:6.0
+
+  # Celery
+
+  celeryworker:
+    <<: *app
+    container_name: diet-assistant-celeryworker
+    depends_on:
+      - redis
+      - db
+    ports: []
+    command: /start-celeryworker.sh
+
+  celerybeat:
+    <<: *app
+    container_name: diet-assistant-celerybeat
+    depends_on:
+      - redis
+      - db
+    ports: []
+    command: /start-celerybeat.sh
+
+
+  mockserver:
+    image: stoplight/prism:3
+    container_name: diet-assistant-mockserver
+    volumes:
+      - ./diet_assistant/schema:/schema
+    ports:
+      - 9000:9000
+    command:
+      - "mock"
+      - "-h"
+      - "0.0.0.0"
+      - "-p"
+      - "9000"
+      - "-m"
+      - "false"
+      - "/schema/schema.yml"

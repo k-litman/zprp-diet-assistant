@@ -1,0 +1,8 @@
+ErrorResponse:
+  type: object
+  properties:
+    detail:
+      type: string
+      description: Error detail
+      example: "Method 'DELETE' not allowed."
+  additionalProperties: true

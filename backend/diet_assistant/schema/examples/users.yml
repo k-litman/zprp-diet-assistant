@@ -1,0 +1,9 @@
+UserExample:
+  first_name: John
+  last_name: Wick
+  username: johnwick
+  email: john.wick@aol.com
+
+UserListExample: [
+  $ref: '#/UserExample'
+]

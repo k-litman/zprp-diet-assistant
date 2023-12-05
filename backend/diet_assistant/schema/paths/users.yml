@@ -1,0 +1,78 @@
+list_create:
+  get:
+    summary: List users
+    operationId: list-users
+    responses:
+      '201':
+        description: Return a list of users
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/users.yml#/UserList'
+            example:
+                $ref: '../examples/users.yml#/UserListExample'
+  post:
+    summary: Create a user
+    operationId: create-user
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/users.yml#/User'
+    responses:
+      '200':
+        description: Return the created user
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/users.yml#/User'
+            example:
+              $ref: '../examples/users.yml#/UserExample'
+      '400':
+        description: Invalid request
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yml#/ErrorResponse'
+            example:
+              $ref: '../examples/common.yml#/ErrorResponseExample'
+detail_delete:
+  get:
+    summary: User detail
+    operationId: user-detail
+    parameters:
+      - $ref: '../parameters/users.yml#/user_id'
+    responses:
+      '200':
+        description: Return user details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/users.yml#/User'
+            example:
+              $ref: '../examples/users.yml#/UserExample'
+      '404':
+        description: User not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yml#/ErrorResponse'
+            example:
+              $ref: '../examples/common.yml#/ErrorResponseExample'
+  delete:
+    summary: Delete user
+    operationId: delete-user
+    parameters:
+      - $ref: '../parameters/users.yml#/user_id'
+    responses:
+      '204':
+        description: User deleted
+      '404':
+        description: User not found
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/common.yml#/ErrorResponse'
+            example:
+              $ref: '../examples/common.yml#/ErrorResponseExample'

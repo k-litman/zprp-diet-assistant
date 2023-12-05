@@ -1,0 +1,12 @@
+openapi: 3.0.1
+info:
+  title: 'test'
+  description: 'A short description of the project.'
+  version: '0.1.0'
+servers:
+  - url: /
+paths:
+  /users/:
+    $ref: 'paths/users.yml#/list_create'
+  /users/{user_id}/:
+    $ref: 'paths/users.yml#/detail_delete'

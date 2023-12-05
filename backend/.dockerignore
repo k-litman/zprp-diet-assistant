@@ -1,0 +1,11 @@
+*
+
+!docker/**/*.sh
+!docker
+
+!shared/templates/**/*
+!shared/static/**/*
+
+!diet_assistant/*
+diet_assistant/.pytest_cache/
+diet_assistant/celerybeat*
