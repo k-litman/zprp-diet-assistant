@@ -2,7 +2,7 @@ from django.contrib.auth import get_user_model
 
 from rest_framework import viewsets
 
-from backend.users.serializers import UserSerializer
+from diet_assistant.users.serializers import UserSerializer
 
 User = get_user_model()
 

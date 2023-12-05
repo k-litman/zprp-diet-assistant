@@ -7,8 +7,8 @@ from django.core.exceptions import PermissionDenied
 from django.http import Http404
 
 from rest_framework import serializers
-from backend.utils.exceptions.api_errors import DomainAPIError
-from backend.utils.exceptions.handlers import drf_error_handler
+from diet_assistant.utils.exceptions.api_errors import DomainAPIError
+from diet_assistant.utils.exceptions.handlers import drf_error_handler
 
 
 @pytest.mark.parametrize(

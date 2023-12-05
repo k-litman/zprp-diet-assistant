@@ -1,6 +1,6 @@
 from rest_framework import routers
 
-from backend.users import views
+from diet_assistant.users import views
 
 app_name = "users"
 

@@ -1,6 +1,6 @@
 import pytest
 
-from backend.users.admin import UserCreationForm
+from diet_assistant.users.admin import UserCreationForm
 
 
 class TestUserCreationForm:

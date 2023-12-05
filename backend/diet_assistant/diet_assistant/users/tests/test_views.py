@@ -3,7 +3,7 @@ from unittest.mock import patch
 from rest_framework import status
 from rest_framework.test import force_authenticate
 
-from backend.users import serializers, views
+from diet_assistant.users import serializers, views
 
 
 class TestUserViewSet:

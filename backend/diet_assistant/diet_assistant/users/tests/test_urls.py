@@ -2,7 +2,7 @@ from django.urls import resolve, reverse
 
 import pytest
 
-from backend.users.views import UserViewSet
+from diet_assistant.users.views import UserViewSet
 
 
 class TestUserURLs:

@@ -1,4 +1,4 @@
-from backend.users.serializers import UserSerializer
+from diet_assistant.users.serializers import UserSerializer
 
 
 class TestUserSerializers:

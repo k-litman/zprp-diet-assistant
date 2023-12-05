@@ -11,7 +11,7 @@ from rest_framework.response import Response
 from rest_framework.views import APIView
 
 from config.openapi import openapi_schema
-from backend.utils.openapi import load_openapi_schema
+from diet_assistant.utils.openapi import load_openapi_schema
 
 
 class OpenAPISchemaView(APIView):
