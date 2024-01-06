@@ -1,0 +1,58 @@
+diet_plans:
+  post:
+    tags:
+      - General
+    summary: Create diet plans
+    operationId: create-diet-plans
+    requestBody:
+      content:
+        application/json:
+          schema:
+            type: object
+            example:
+              name: MY_diet_plan
+              days: 7
+              meals_per_day: 3
+              cuisine_type: italian
+              veganity:
+                haha: true
+              restricted_ingredients: [ ]
+              calories: 100
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: { }
+  get:
+    tags:
+      - General
+    summary: Get my diet plans
+    operationId: get-my-diet-plans
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: { }
+get_meals:
+  get:
+    tags:
+      - General
+    summary: Get meals
+    operationId: get-meals
+    responses:
+      '200':
+        description: Successful response
+        content:
+          application/json: { }
+get_ingredients:
+  get:
+    tags:
+      - General
+    summary: Get ingredients
+    url: /ingredients
+    operationId: get-ingredients
+    responses:
+    '200':
+      description: Successful response
+      content:
+      application/json: { }

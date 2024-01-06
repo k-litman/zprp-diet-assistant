@@ -14,6 +14,7 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("diet_assistant.users.urls")),
+    path("diets/", include("diet_assistant.diet_plans.urls")),
     path("api-auth/", include("rest_framework.urls")),
     path(
         settings.OPENAPI_SCHEMA_URL,
