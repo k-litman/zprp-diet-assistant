@@ -10,9 +10,9 @@ paths:
     $ref: 'paths/users.yml#/list_create'
   /users/{user_id}/:
     $ref: 'paths/users.yml#/detail_delete'
-  /diets/meals:
-    $ref: 'paths/diets.yml#/get_meals'
-  /diets/ingredients:
-    $ref: 'paths/diets.yml#/get_ingredients'
-  /diets/diet-plans:
-    $ref: 'paths/diets.yml#/diet_plans'
+#  /diets/meals:
+#    $ref: 'paths/diets.yml#/get_meals'
+#  /diets/ingredients:
+#    $ref: 'paths/diets.yml#/get_ingredients'
+#  /diets/diet-plans:
+#    $ref: 'paths/diets.yml#/diet_plans'
