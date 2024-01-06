@@ -8,11 +8,6 @@ set -o nounset
 python /app/manage.py migrate --noinput
 python /app/manage.py collectstatic --clear --noinput
 
-# Heroku exposes its expected application port using the PORT variable
-if [ -n "$DYNO" ]; then
-  GUNICORN_PORT=$PORT
-fi
-
 gunicorn config.wsgi:application \
         --bind ${GUNICORN_HOST:-0.0.0.0}:${GUNICORN_PORT:-8000} \
         --timeout ${GUNICORN_TIMEOUT:-300} \
