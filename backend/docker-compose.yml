@@ -6,7 +6,7 @@ volumes:
 
 services:
   db:
-    image: postgres:13.8
+    image: postgres:15.1
     volumes:
       - postgresql-data:/var/lib/postgresql/data
     env_file:
