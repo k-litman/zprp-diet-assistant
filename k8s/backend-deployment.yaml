@@ -42,4 +42,8 @@ spec:
               value: "redis://redis:6379/0"
             - name: CELERY_BROKER_URL
               value: "redis://redis:6379"
+            - name: CORS_ORIGIN_WHITELIST
+              value: "http://localhost:5173,https://zprp.fridaydeployment.com,http://zprp.fridaydeployment.com"
+            - name: CSRF_TRUSTED_ORIGINS
+              value: "localhost:5173,zprp.fridaydeployment.com"
       restartPolicy: Always
