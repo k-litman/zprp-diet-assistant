@@ -135,7 +135,7 @@ USER django
 
 # Copy the built virtualenv from the builder stage
 COPY --from=builder --chown=django:django $VIRTUAL_ENV $VIRTUAL_ENV
-COPY --from=builder --chown=django:django $BUILD_PIPFILE_LOCK $BUILD_PIPFILE_LOCK
+#COPY --from=builder --chown=django:django $BUILD_PIPFILE_LOCK $BUILD_PIPFILE_LOCK
 
 # Copy the application data in
 COPY --chown=django:django ./diet_assistant /app/
