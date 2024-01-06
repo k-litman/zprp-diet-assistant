@@ -10,7 +10,7 @@
 * 28.11 - 10.12: Implementacja API/frontendu
 * 11.12 - 24.12: Implementacja testów jednostkowych i wydajnościowych
 * 1.01 - 7.01 - Konteneryzacja i wdrożenie produkcyjne
-* 8.01 - 14.01 - Ostania faza testów, oddanie projektu
+* 8.01 - 14.01 - Ostatnia faza testów, oddanie projektu
 
 ## 2. Bibliografia
 
