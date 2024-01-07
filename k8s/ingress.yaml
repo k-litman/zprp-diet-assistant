@@ -2,12 +2,23 @@ apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
   name: zprp-diet-assistant-ingress
+  namespace: diet-assistant
+  annotations:
+    cert-manager.io/issuer: "letsencrypt-prod"
+    acme.cert-manager.io/http01-edit-in-place: "true"
+    nginx.ingress.kubernetes.io/force-ssl-redirect: "false"
+    nginx.ingress.kubernetes.io/rewrite-target: "/"
 spec:
+  ingressClassName: nginx
+  tls:
+    - hosts:
+      - api.zprp.fridaydeployment.com
+      secretName: api-zprp-diet-assistant-tls
   rules:
-    - host: zprp.fridaydeployment.com
+    - host: api.zprp.fridaydeployment.com
       http:
         paths:
-          - path: /api
+          - path: /
             pathType: Prefix
             backend:
               service:
