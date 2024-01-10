@@ -74,9 +74,9 @@ jobs:
           platforms: linux/amd64,linux/arm64
       - name: Update image tags in k8s
         run: |
-          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/backend-deployment.yaml
-          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/celerybeat-deployment.yaml
-          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/celeryworker-deployment.yaml
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ${{ steps.meta.outputs.tags }}|' ./k8s/backend-deployment.yaml
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ${{ steps.meta.outputs.tags }}|' ./k8s/celerybeat-deployment.yaml
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ${{ steps.meta.outputs.tags }}|' ./k8s/celeryworker-deployment.yaml
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
           git add ./k8s/backend-deployment.yaml
