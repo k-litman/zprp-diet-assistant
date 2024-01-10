@@ -47,6 +47,9 @@ SENTRY_ENVIRONMENT = env("SENTRY_ENVIRONMENT", default="production")
 # https://docs.sentry.io/workflow/releases/?platform=python
 SENTRY_RELEASE = f"diet_assistant@{APP_VERSION}"
 
+SENTRY_DSN = env("SENTRY_DSN", default="")
+SENTRY_SAMPLE_RATE = 1.0
+
 sentry_sdk.init(
     release=SENTRY_RELEASE,
     environment=SENTRY_ENVIRONMENT,
@@ -54,6 +57,8 @@ sentry_sdk.init(
         DjangoIntegration(),  # fmt: off
         CeleryIntegration(),  # fmt: off
     ],  # fmt: off
+    dsn=SENTRY_DSN,
+    traces_sample_rate=SENTRY_SAMPLE_RATE,
 )
 
 
