@@ -46,4 +46,6 @@ spec:
               value: "http://localhost:5173,https://zprp.fridaydeployment.com,http://zprp.fridaydeployment.com"
             - name: CSRF_TRUSTED_ORIGINS
               value: "localhost:5173,zprp.fridaydeployment.com"
+            - name: SENTRY_DSN
+              value: "https://91ca397292f4790a277259590c7101dd@o4506361867599872.ingest.sentry.io/4506546668765184"
       restartPolicy: Always
