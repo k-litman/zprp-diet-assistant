@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/k-litman/zprp-diet-assistant/backend:latest
+          image: ghcr.io/k-litman/zprp-diet-assistant/backend:$1{{ steps.meta.outputs.tags }}
           ports:
             - containerPort: 8000
           resources:
