@@ -10,6 +10,10 @@ on:
         required: true
         default: 'Lack of changes in the code, but needs to have a new image!'
 
+permissions:
+  contents: write
+  packages: write
+
 jobs:
   test-backend:
     runs-on: ubuntu-latest
@@ -32,7 +36,7 @@ jobs:
         working-directory: backend
         run: |
           ./manage.sh validate-spec
-  build-and-deploy-backend:
+  build-backend:
     needs: test-backend
     runs-on: ubuntu-latest
     steps:
@@ -66,6 +70,24 @@ jobs:
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
           platforms: linux/amd64,linux/arm64
+      - name: Update image tags in k8s
+        run: |
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/backend-deployment.yaml
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/celerybeat-deployment.yaml
+          sed -i 's|image: ghcr.io/${{ github.repository }}/backend:.*|image: ghcr.io/${{ github.repository }}/backend:${{ steps.meta.outputs.tags }}|' ./k8s/celeryworker-deployment.yaml
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          git add ./k8s/backend-deployment.yaml
+          git add ./k8s/celeryworker-deployment.yaml
+          git add ./k8s/celerybeat-deployment.yaml
+          git commit -m "Update image tags in k8s"
+          git push
+  deploy:
+    needs: build-backend
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
       - name: Configure kubectl
