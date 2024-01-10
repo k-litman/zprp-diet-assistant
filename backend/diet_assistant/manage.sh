@@ -18,7 +18,8 @@ RUNTEST="$PYTEST \
     --cov"
 
 # CI specific test flags
-RUNCITEST="$RUNTEST"
+RUNCITEST="$PYTEST \
+    --durations=10"
 
 migrate() {
     python manage.py migrate --noinput
