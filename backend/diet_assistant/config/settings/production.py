@@ -105,6 +105,8 @@ ALLOWED_HOSTS = env.list("DJANGO_ALLOWED_HOSTS")
 
 INSTALLED_APPS += ["gunicorn", "django_prometheus"]
 
+REST_FRAMEWORK["DEFAULT_RENDERER_CLASSES"] = ("rest_framework.renderers.JSONRenderer",)
+
 
 # TEMPLATES
 # ------------------------------------------------------------------------------

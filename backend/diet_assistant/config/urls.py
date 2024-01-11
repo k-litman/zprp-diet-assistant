@@ -14,7 +14,6 @@ urlpatterns = [
     path(settings.ADMIN_URL, admin.site.urls),
     # User management
     path("users/", include("diet_assistant.users.urls")),
-    path("diets/", include("diet_assistant.diet_plans.urls")),
     path("api-auth/", include("rest_framework.urls")),
     path(
         settings.OPENAPI_SCHEMA_URL,
@@ -23,6 +22,7 @@ urlpatterns = [
     ),
     path("docs/", ReDocView.as_view(), name="redoc"),
     # Your stuff: custom urls includes go here
+    path("diets/", include("diet_assistant.diet_plans.urls")),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 handler400 = handlers.bad_request
