@@ -51,6 +51,10 @@ ishell() {
     python manage.py shell_plus --ipython
 }
 
+populate() {
+    python populate_data.py
+}
+
 
 case "$cmd" in
     check-migrations)
@@ -106,6 +110,9 @@ case "$cmd" in
     django)
         # shellcheck disable=SC2086
         python manage.py $args
+    ;;
+    populate)
+        populate
     ;;
     *)
         echo "Unknown command: $cmd $args"

@@ -16,6 +16,8 @@ class CuisineType(models.TextChoices):
     FRENCH = "fr", _("French")
     MEXICAN = "mx", _("Mexican")
     ASIAN = "as", _("Asian")
+    SPANISH = "sp", _("Spanish")
+    AMERICAN = "us", _("American")
 
 
 class Veganity(models.TextChoices):

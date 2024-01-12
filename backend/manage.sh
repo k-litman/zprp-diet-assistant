@@ -48,6 +48,8 @@ Commands:
       Important: This command does not use quoting and can cause globbing. To prevent that, make sure your command does not fall under filename expansion pattern.
   run <command>
       Run the provided command inside the local application container
+  populate
+      Populate the database with sample data
 "
 }
 

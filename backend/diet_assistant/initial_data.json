@@ -1,0 +1,482 @@
+[
+  {
+        "name": "Classic Margherita Pizza",
+        "description": "A traditional Italian pizza with fresh tomatoes, mozzarella cheese, and basil.",
+        "calories": 300,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Tomato", "Cheese", "Basil"]
+    },
+    {
+        "name": "Chicken Caesar Salad",
+        "description": "A rich salad with roasted chicken breast, romaine lettuce, and Caesar dressing.",
+        "calories": 450,
+        "cuisine_type": "French",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Lettuce", "Cheese"]
+    },
+    {
+        "name": "Vegan Bean Chili",
+        "description": "A spicy and hearty bean chili, perfect for vegan diets.",
+        "calories": 350,
+        "cuisine_type": "Mexican",
+        "veganity": "Vegan",
+        "ingredients": ["Beans", "Onion", "Bell Pepper", "Garlic"]
+    },
+    {
+        "name": "Beef Bourguignon",
+        "description": "A classic French stew made with beef, mushrooms, and red wine.",
+        "calories": 600,
+        "cuisine_type": "French",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Mushroom", "Onion", "Garlic"]
+    },
+    {
+        "name": "Tuna Sushi Roll",
+        "description": "Fresh tuna and cucumber rolled in sushi rice and seaweed.",
+        "calories": 250,
+        "cuisine_type": "Asian",
+        "veganity": "Fish",
+        "ingredients": ["Tuna", "Rice", "Cucumber"]
+    },
+   {
+        "name": "Spaghetti Carbonara",
+        "description": "Classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+        "calories": 500,
+        "cuisine_type": "Italian",
+        "veganity": "Meat",
+        "ingredients": ["Egg", "Cheese", "Pasta", "Bacon"]
+    },
+    {
+        "name": "Vegetable Stir Fry",
+        "description": "A mix of stir-fried vegetables with soy sauce and garlic, served with rice.",
+        "calories": 350,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Bell Pepper", "Onion", "Garlic", "Rice"]
+    },
+    {
+        "name": "French Onion Soup",
+        "description": "A rich and flavorful soup made with caramelized onions and beef broth, topped with toasted bread and cheese.",
+        "calories": 400,
+        "cuisine_type": "French",
+        "veganity": "Meat",
+        "ingredients": ["Onion", "Beef", "Cheese"]
+    },
+    {
+        "name": "Pierogi",
+        "description": "Traditional Polish dumplings filled with cheese and potato, served with a dollop of sour cream.",
+        "calories": 450,
+        "cuisine_type": "Polish",
+        "veganity": "Vegetarian",
+        "ingredients": ["Cheese", "Potato", "Sour Cream"]
+    },
+    {
+        "name": "Grilled Shrimp Tacos",
+        "description": "Grilled shrimp in a soft taco shell, topped with salsa and lettuce.",
+        "calories": 300,
+        "cuisine_type": "Mexican",
+        "veganity": "Fish",
+        "ingredients": ["Shrimp", "Tomato", "Lettuce"]
+    },
+    {
+        "name": "Mushroom Risotto",
+        "description": "Creamy Italian risotto cooked with assorted mushrooms and parmesan cheese.",
+        "calories": 480,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Mushroom", "Rice", "Cheese"]
+    },
+    {
+        "name": "Pork Goulash",
+        "description": "A hearty stew of pork, onions, and paprika, served over egg noodles.",
+        "calories": 530,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Pork", "Onion", "Paprika"]
+    },
+    {
+        "name": "Chicken Tikka Masala",
+        "description": "Grilled chicken in a spiced tomato cream sauce, served with basmati rice.",
+        "calories": 450,
+        "cuisine_type": "Asian",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Tomato", "Cream", "Rice"]
+    },
+    {
+        "name": "Ratatouille",
+        "description": "A French vegetable stew with eggplant, zucchini, bell peppers, and tomato.",
+        "calories": 300,
+        "cuisine_type": "French",
+        "veganity": "Vegan",
+        "ingredients": ["Eggplant", "Zucchini", "Bell Pepper", "Tomato"]
+    },
+    {
+        "name": "Fish Tacos",
+        "description": "Battered and fried fish in corn tortillas with cabbage slaw and a creamy sauce.",
+        "calories": 320,
+        "cuisine_type": "Mexican",
+        "veganity": "Fish",
+        "ingredients": ["Fish", "Cabbage", "Corn Tortilla"]
+    },
+    {
+        "name": "Beef Stroganoff",
+        "description": "Sautéed beef in a creamy mushroom sauce, served over egg noodles.",
+        "calories": 560,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Mushroom", "Cream"]
+    },
+    {
+        "name": "Eggplant Parmesan",
+        "description": "Breaded eggplant slices baked with marinara sauce and mozzarella cheese.",
+        "calories": 410,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Eggplant", "Tomato Sauce", "Cheese"]
+    },
+    {
+        "name": "Vegetable Pad Thai",
+        "description": "Stir-fried rice noodles with vegetables and tofu, flavored with tamarind and peanuts.",
+        "calories": 400,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Rice Noodles", "Tofu", "Peanuts"]
+    },
+    {
+        "name": "Quiche Lorraine",
+        "description": "A savory French tart with bacon, cheese, and egg custard in a pastry crust.",
+        "calories": 480,
+        "cuisine_type": "French",
+        "veganity": "Meat",
+        "ingredients": ["Bacon", "Cheese", "Egg"]
+    },
+    {
+        "name": "Chicken Enchiladas",
+        "description": "Corn tortillas filled with chicken and cheese, topped with a red chili sauce.",
+        "calories": 450,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Cheese", "Corn Tortilla", "Chili Sauce"]
+    },
+    {
+        "name": "Lentil Soup",
+        "description": "A nutritious soup made with lentils, carrots, and spices.",
+        "calories": 220,
+        "cuisine_type": "French",
+        "veganity": "Vegan",
+        "ingredients": ["Lentils", "Carrot", "Onion"]
+    },
+    {
+        "name": "Chicken Pad Thai",
+        "description": "A popular Thai dish with stir-fried rice noodles, chicken, and a tangy tamarind sauce.",
+        "calories": 400,
+        "cuisine_type": "Asian",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Rice Noodles", "Tamarind"]
+    },
+    {
+        "name": "Vegetarian Lasagna",
+        "description": "Layers of pasta, ricotta, spinach, and marinara sauce, topped with melted mozzarella.",
+        "calories": 350,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Pasta", "Ricotta", "Spinach", "Marinara Sauce"]
+    },
+    {
+        "name": "Beef Tacos",
+        "description": "Seasoned beef in crispy taco shells, topped with lettuce, cheese, and salsa.",
+        "calories": 300,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Lettuce", "Cheese", "Salsa"]
+    },
+    {
+        "name": "Pierogi with Meat",
+        "description": "Traditional Polish dumplings filled with minced meat and onions.",
+        "calories": 450,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Minced Meat", "Onion", "Dough"]
+    },
+    {
+        "name": "Falafel Wrap",
+        "description": "Middle Eastern chickpea falafel balls wrapped in a soft tortilla with vegetables and tahini sauce.",
+        "calories": 380,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Falafel", "Tortilla", "Vegetables", "Tahini"]
+    },
+    {
+        "name": "Salmon Teriyaki",
+        "description": "Grilled salmon glazed with a sweet and savory teriyaki sauce, served with steamed rice.",
+        "calories": 500,
+        "cuisine_type": "Asian",
+        "veganity": "Fish",
+        "ingredients": ["Salmon", "Teriyaki Sauce", "Rice"]
+    },
+    {
+        "name": "Chicken Alfredo Pasta",
+        "description": "Pasta in a creamy Alfredo sauce with grilled chicken and parmesan cheese.",
+        "calories": 580,
+        "cuisine_type": "Italian",
+        "veganity": "Meat",
+        "ingredients": ["Pasta", "Chicken", "Alfredo Sauce"]
+    },
+    {
+        "name": "Shakshuka",
+        "description": "A North African dish of eggs poached in a sauce of tomatoes, chili peppers, and onions.",
+        "calories": 320,
+        "cuisine_type": "French",
+        "veganity": "Vegetarian",
+        "ingredients": ["Egg", "Tomato", "Chili Pepper", "Onion"]
+    },
+    {
+        "name": "Pork Schnitzel",
+        "description": "Tenderized pork cutlet, breaded and fried to a golden brown.",
+        "calories": 510,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Pork", "Breadcrumbs", "Egg"]
+    },
+    {
+        "name": "Vegetable Curry",
+        "description": "A spicy mix of vegetables cooked in a fragrant Indian curry sauce.",
+        "calories": 350,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Potato", "Carrot", "Peas", "Curry Sauce"]
+    },
+    {
+        "name": "Shrimp Paella",
+        "description": "Traditional Spanish rice dish with shrimp, bell peppers, and saffron.",
+        "calories": 450,
+        "cuisine_type": "Spanish",
+        "veganity": "Fish",
+        "ingredients": ["Shrimp", "Rice", "Bell Pepper", "Saffron"]
+    },
+    {
+        "name": "Bacon and Egg Breakfast Burrito",
+        "description": "A hearty breakfast burrito filled with bacon, scrambled eggs, and cheese.",
+        "calories": 500,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Bacon", "Egg", "Cheese", "Tortilla"]
+    },
+    {
+        "name": "Pork Ramen",
+        "description": "Rich and flavorful Japanese noodle soup with pork, egg, and vegetables.",
+        "calories": 600,
+        "cuisine_type": "Asian",
+        "veganity": "Meat",
+        "ingredients": ["Pork", "Noodles", "Egg", "Vegetables"]
+    },
+    {
+        "name": "Margherita Flatbread",
+        "description": "A light and crispy flatbread topped with tomato, mozzarella, and basil.",
+        "calories": 300,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Tomato", "Mozzarella", "Basil", "Flatbread"]
+    },
+    {
+        "name": "Beef Bulgogi",
+        "description": "Korean dish of marinated beef, grilled and served with rice and vegetables.",
+        "calories": 550,
+        "cuisine_type": "Asian",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Rice", "Vegetables", "Bulgogi Sauce"]
+    },
+    {
+        "name": "Caprese Salad",
+        "description": "A simple Italian salad with fresh tomatoes, mozzarella, basil, and balsamic glaze.",
+        "calories": 250,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Tomato", "Mozzarella", "Basil", "Balsamic Glaze"]
+    },
+    {
+        "name": "Chicken Fajitas",
+        "description": "Sizzling chicken strips with peppers and onions, served with tortillas and toppings.",
+        "calories": 400,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Bell Pepper", "Onion", "Tortilla"]
+    },
+    {
+        "name": "Vegetarian Borscht",
+        "description": "A traditional Polish beet soup with a variety of vegetables, served with sour cream.",
+        "calories": 200,
+        "cuisine_type": "Polish",
+        "veganity": "Vegetarian",
+        "ingredients": ["Beet", "Carrot", "Potato", "Sour Cream"]
+    },
+    {
+        "name": "Spicy Tuna Roll",
+        "description": "Sushi roll with spicy tuna, cucumber, and avocado, wrapped in seaweed and rice.",
+        "calories": 280,
+        "cuisine_type": "Asian",
+        "veganity": "Fish",
+        "ingredients": ["Tuna", "Cucumber", "Avocado", "Rice"]
+    },
+    {
+        "name": "Lentil Soup",
+        "description": "A nutritious soup made with lentils, carrots, and spices.",
+        "calories": 220,
+        "cuisine_type": "French",
+        "veganity": "Vegan",
+        "ingredients": ["Lentils", "Carrot", "Onion"]
+    },
+    {
+        "name": "Chicken Pad Thai",
+        "description": "A popular Thai dish with stir-fried rice noodles, chicken, and a tangy tamarind sauce.",
+        "calories": 400,
+        "cuisine_type": "Asian",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Rice Noodles", "Tamarind"]
+    },
+    {
+        "name": "Vegetarian Lasagna",
+        "description": "Layers of pasta, ricotta, spinach, and marinara sauce, topped with melted mozzarella.",
+        "calories": 350,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Pasta", "Ricotta", "Spinach", "Marinara Sauce"]
+    },
+    {
+        "name": "Beef Tacos",
+        "description": "Seasoned beef in crispy taco shells, topped with lettuce, cheese, and salsa.",
+        "calories": 300,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Lettuce", "Cheese", "Salsa"]
+    },
+    {
+        "name": "Pierogi with Meat",
+        "description": "Traditional Polish dumplings filled with minced meat and onions.",
+        "calories": 450,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Minced Meat", "Onion", "Dough"]
+    },
+    {
+        "name": "Falafel Wrap",
+        "description": "Middle Eastern chickpea falafel balls wrapped in a soft tortilla with vegetables and tahini sauce.",
+        "calories": 380,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Falafel", "Tortilla", "Vegetables", "Tahini"]
+    },
+    {
+        "name": "Salmon Teriyaki",
+        "description": "Grilled salmon glazed with a sweet and savory teriyaki sauce, served with steamed rice.",
+        "calories": 500,
+        "cuisine_type": "Asian",
+        "veganity": "Fish",
+        "ingredients": ["Salmon", "Teriyaki Sauce", "Rice"]
+    },
+    {
+        "name": "Chicken Alfredo Pasta",
+        "description": "Pasta in a creamy Alfredo sauce with grilled chicken and parmesan cheese.",
+        "calories": 580,
+        "cuisine_type": "Italian",
+        "veganity": "Meat",
+        "ingredients": ["Pasta", "Chicken", "Alfredo Sauce"]
+    },
+    {
+        "name": "Shakshuka",
+        "description": "A North African dish of eggs poached in a sauce of tomatoes, chili peppers, and onions.",
+        "calories": 320,
+        "cuisine_type": "French",
+        "veganity": "Vegetarian",
+        "ingredients": ["Egg", "Tomato", "Chili Pepper", "Onion"]
+    },
+    {
+        "name": "Pork Schnitzel",
+        "description": "Tenderized pork cutlet, breaded and fried to a golden brown.",
+        "calories": 510,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Pork", "Breadcrumbs", "Egg"]
+    },
+    {
+        "name": "Tomato Bruschetta",
+        "description": "Grilled bread topped with a mixture of diced tomatoes, garlic, and basil.",
+        "calories": 180,
+        "cuisine_type": "Italian",
+        "veganity": "Vegan",
+        "ingredients": ["Bread", "Tomato", "Garlic", "Basil"]
+    },
+    {
+        "name": "Beef Wellington",
+        "description": "A luxurious dish of beef tenderloin coated with mushroom duxelles and wrapped in puff pastry.",
+        "calories": 750,
+        "cuisine_type": "French",
+        "veganity": "Meat",
+        "ingredients": ["Beef", "Mushroom", "Puff Pastry"]
+    },
+    {
+        "name": "Vegetable Tempura",
+        "description": "Lightly battered and deep-fried assorted vegetables, served with a dipping sauce.",
+        "calories": 300,
+        "cuisine_type": "Asian",
+        "veganity": "Vegan",
+        "ingredients": ["Carrot", "Bell Pepper", "Onion", "Tempura Batter"]
+    },
+    {
+        "name": "Pesto Pasta Salad",
+        "description": "Cold pasta salad with homemade pesto sauce, cherry tomatoes, and pine nuts.",
+        "calories": 420,
+        "cuisine_type": "Italian",
+        "veganity": "Vegetarian",
+        "ingredients": ["Pasta", "Pesto Sauce", "Cherry Tomato", "Pine Nuts"]
+    },
+    {
+        "name": "Chicken Quesadilla",
+        "description": "Flour tortilla filled with seasoned chicken, cheese, and peppers, grilled to perfection.",
+        "calories": 500,
+        "cuisine_type": "Mexican",
+        "veganity": "Meat",
+        "ingredients": ["Chicken", "Cheese", "Bell Pepper", "Tortilla"]
+    },
+    {
+        "name": "Salmon Sashimi",
+        "description": "Fresh slices of raw salmon, served with soy sauce and wasabi.",
+        "calories": 200,
+        "cuisine_type": "Asian",
+        "veganity": "Fish",
+        "ingredients": ["Salmon", "Soy Sauce", "Wasabi"]
+    },
+    {
+        "name": "Stuffed Cabbage Rolls",
+        "description": "Cabbage leaves filled with a mixture of ground meat, rice, and spices, cooked in tomato sauce.",
+        "calories": 350,
+        "cuisine_type": "Polish",
+        "veganity": "Meat",
+        "ingredients": ["Cabbage", "Ground Meat", "Rice", "Tomato Sauce"]
+    },
+    {
+        "name": "Butternut Squash Soup",
+        "description": "Creamy soup made from pureed butternut squash and spices, garnished with cream.",
+        "calories": 250,
+        "cuisine_type": "French",
+        "veganity": "Vegetarian",
+        "ingredients": ["Butternut Squash", "Onion", "Cream"]
+    },
+    {
+        "name": "Pulled Pork Sandwich",
+        "description": "Slow-cooked pulled pork in BBQ sauce, served on a bun with coleslaw.",
+        "calories": 550,
+        "cuisine_type": "American",
+        "veganity": "Meat",
+        "ingredients": ["Pork", "BBQ Sauce", "Bun", "Coleslaw"]
+    },
+    {
+        "name": "Veggie Burger",
+        "description": "A hearty patty made from vegetables and beans, served on a bun with lettuce and tomato.",
+        "calories": 400,
+        "cuisine_type": "American",
+        "veganity": "Vegan",
+        "ingredients": ["Veggie Patty", "Bun", "Lettuce", "Tomato"]
+    }
+]
