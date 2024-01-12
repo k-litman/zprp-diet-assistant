@@ -26,6 +26,13 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
     serializer_class = DietPlanSerializer
     permission_classes = [IsAuthenticated]
 
+    def retrieve(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+        serializer = DietPlanSerializer(instance)
+        return Response(serializer.data)
+
     def get_queryset(self):
         return DietPlan.objects.filter(user=self.request.user)
 
