@@ -7,7 +7,7 @@
 	},
 	"item": [
 		{
-			"name": "create diet plans",
+			"name": "Create diet plan",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/diet-plans/",
+					"raw": "http://0.0.0.0:8000/diets/diet-plan/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -32,7 +32,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"diet-plans",
+						"diet-plan",
 						""
 					]
 				}
@@ -42,20 +42,10 @@
 		{
 			"name": "Get my diet plans",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "e3ebcaa73ed91cb41f43e1d0007466c80d4a0caa",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/diet-plans",
+					"raw": "http://0.0.0.0:8000/diets/diet-plan/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -66,7 +56,32 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"diet-plans"
+						"diet-plan",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get my diet plans Copy",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://0.0.0.0:8000/diets/diet-plan/219",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"diets",
+						"diet-plan",
+						"219"
 					]
 				}
 			},
@@ -78,7 +93,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/ingredients/?name=Ingredient 2",
+					"raw": "http://0.0.0.0:8000/diets/ingredient/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -89,13 +104,14 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"ingredients",
+						"ingredient",
 						""
 					],
 					"query": [
 						{
 							"key": "name",
-							"value": "Ingredient 2"
+							"value": "Ingredient 2",
+							"disabled": true
 						}
 					]
 				}
@@ -105,20 +121,10 @@
 		{
 			"name": "Get meals",
 			"request": {
-				"auth": {
-					"type": "bearer",
-					"bearer": [
-						{
-							"key": "token",
-							"value": "e3ebcaa73ed91cb41f43e1d0007466c80d4a0caa",
-							"type": "string"
-						}
-					]
-				},
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/meals",
+					"raw": "http://0.0.0.0:8000/diets/meal",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -129,7 +135,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"meals"
+						"meal"
 					]
 				}
 			},
@@ -138,11 +144,14 @@
 		{
 			"name": "Create User",
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"user\",\n    \"first_name\": \"User\",\n    \"last_name\": \"name\", \n    \"email\": \"User1@mail.com\",\n    \"password\": \"12345678\"\n}",
+					"raw": "{\n    \"username\": \"new_user\",\n    \"password\": \"12345678\",\n    \"email\": \"test@1mail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -181,27 +190,34 @@
 				}
 			],
 			"request": {
+				"auth": {
+					"type": "noauth"
+				},
 				"method": "POST",
 				"header": [],
 				"body": {
-					"mode": "formdata",
-					"formdata": [
-						{
-							"key": "username",
-							"value": "Userasd1",
-							"type": "text"
-						},
-						{
-							"key": "password",
-							"value": "1234567",
-							"type": "text"
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"new_user\",\n    \"password\": \"12345678\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
 						}
-					]
+					}
 				},
 				"url": {
-					"raw": "TODO",
+					"raw": "http://0.0.0.0:8000/users/login/",
+					"protocol": "http",
 					"host": [
-						"TODO"
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"login",
+						""
 					]
 				}
 			},
@@ -210,12 +226,61 @@
 		{
 			"name": "Logout",
 			"request": {
-				"method": "GET",
+				"method": "DELETE",
 				"header": [],
 				"url": {
-					"raw": "TODO",
+					"raw": "http://0.0.0.0:8000/users/logout/",
+					"protocol": "http",
 					"host": [
-						"TODO"
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"users",
+						"logout",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Replace meal of diet plan",
+			"request": {
+				"method": "PATCH",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\": 33\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://0.0.0.0:8000/diets/diet-plan/213/day/389/meal/382/replace/",
+					"protocol": "http",
+					"host": [
+						"0",
+						"0",
+						"0",
+						"0"
+					],
+					"port": "8000",
+					"path": [
+						"diets",
+						"diet-plan",
+						"213",
+						"day",
+						"389",
+						"meal",
+						"382",
+						"replace",
+						""
 					]
 				}
 			},
@@ -227,7 +292,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "e3ebcaa73ed91cb41f43e1d0007466c80d4a0caa",
+				"value": "9f17462a2c3e33bae1dc4a995452d5953f5a9ad5",
 				"type": "string"
 			}
 		]
