@@ -16,6 +16,7 @@ class Ingredient(models.Model):
 class DietPlan(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="diet_plans")
     name = models.CharField(max_length=100)
+    generated = models.BooleanField(default=False)
 
     def __str__(self):
         return self.name

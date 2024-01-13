@@ -15,6 +15,7 @@ class MealSerializer(serializers.ModelSerializer):
     class Meta:
         model = Meal
         fields = [
+            "id",
             "name",
             "description",
             "calories",
@@ -24,19 +25,27 @@ class MealSerializer(serializers.ModelSerializer):
         ]
 
 
+class ReplaceMealSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
+
+
 class DayMealSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     meal_type = serializers.CharField(max_length=20)
     meal = MealSerializer()
 
 
 class DaySerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     day_number = serializers.IntegerField()
     meals = DayMealSerializer(many=True)
 
 
 class DietPlanSerializer(serializers.Serializer):
+    id = serializers.IntegerField()
     name = serializers.CharField(max_length=100)
     days = DaySerializer(many=True)
+    generated = serializers.BooleanField()
 
 
 class DietPlanCreateSerializer(serializers.Serializer):

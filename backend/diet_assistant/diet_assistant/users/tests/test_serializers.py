@@ -13,4 +13,4 @@ class TestUserSerializers:
     def test_required_field_in_serializers(self):
         serializer = UserSerializer(data={})
         assert serializer.is_valid() is False
-        assert set(serializer.errors) == {"username"}
+        assert set(serializer.errors) == {"username", "password"}

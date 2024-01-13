@@ -1,6 +1,8 @@
 from rest_framework import status, viewsets
+from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
+from rest_framework.views import APIView
 
 from diet_assistant.diet_plans.models import DietPlan, Ingredient, Meal
 from diet_assistant.diet_plans.serializers import (
@@ -8,8 +10,10 @@ from diet_assistant.diet_plans.serializers import (
     DietPlanSerializer,
     IngredientSerializer,
     MealSerializer,
+    ReplaceMealSerializer,
 )
 
+from .models import DayMeal
 from .tasks import CreateDietPlanCeleryTaskData, create_diet_plan
 
 
@@ -39,15 +43,16 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         post_serializer = DietPlanCreateSerializer(data=request.data)
         post_serializer.is_valid(raise_exception=True)
-
-        # You can now use the validated data
         data = post_serializer.validated_data
 
-        # Trigger your Celery task
+        diet_plan = DietPlan.objects.create(
+            user=request.user,
+            name=data["name"],
+            generated=False,
+        )
         create_diet_plan.delay(
             CreateDietPlanCeleryTaskData(
-                user_id=request.user.id,
-                name=data["name"],
+                plan_id=diet_plan.id,
                 days=data["days"],
                 meals_per_day=data["meals_per_day"],
                 cuisine_type=data["cuisine_type"],
@@ -57,9 +62,8 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
             ).to_json()
         )
 
-        # You might want to use your main serializer here for the response
-        headers = self.get_success_headers({})
-        return Response({}, status=status.HTTP_200_OK, headers=headers)
+        serializer = DietPlanSerializer(diet_plan)
+        return Response(serializer.data)
 
 
 class IngredientsViewSet(viewsets.ReadOnlyModelViewSet):
@@ -74,3 +78,18 @@ class IngredientsViewSet(viewsets.ReadOnlyModelViewSet):
         if name is not None:
             queryset = queryset.filter(name__icontains=name)
         return queryset
+
+
+class ReplaceMealView(APIView):
+    def patch(self, request, diet_plan_id, day_id, day_meal_id):
+        if get_object_or_404(DietPlan, id=diet_plan_id).user != request.user:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+
+        day_meal = get_object_or_404(DayMeal, day_id=day_id, id=day_meal_id)
+        serializer = ReplaceMealSerializer(data=request.data)
+        serializer.is_valid(raise_exception=True)
+        new_meal = get_object_or_404(Meal, id=serializer.validated_data["id"])
+        day_meal.meal = new_meal
+        day_meal.save()
+
+        return Response(status=status.HTTP_204_NO_CONTENT)

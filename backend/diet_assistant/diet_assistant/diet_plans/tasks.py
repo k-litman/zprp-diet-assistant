@@ -2,6 +2,7 @@ import json
 
 from dataclasses import asdict, dataclass
 from time import sleep
+from typing import Dict, List
 
 from celery import shared_task
 
@@ -10,13 +11,12 @@ from .models import Day, DayMeal, DietPlan, Ingredient, Meal, User
 
 @dataclass
 class CreateDietPlanCeleryTaskData:
-    user_id: int
-    name: str
+    plan_id: int
     days: int
     meals_per_day: int
     cuisine_type: str
-    veganity: dict[bool]
-    restricted_ingredients: list[str]
+    veganity: Dict[str, bool]
+    restricted_ingredients: List[str]
     calories: int
 
     def to_dict(self):
@@ -36,18 +36,42 @@ class CreateDietPlanCeleryTaskData:
 
 @shared_task
 def create_diet_plan(data):
-    print(CreateDietPlanCeleryTaskData.from_json(data))
-    # sleep for 10 seconds then create a meal plan
-    user = User.objects.get(id=1)
+    data = CreateDietPlanCeleryTaskData.from_json(data)
+    try:
+        diet_plan = DietPlan.objects.get(id=data.plan_id)
+        if diet_plan.generated:
+            # TODO: Log error
+            return data
+        algorithm(
+            days=data.days,
+            meals_per_day=data.meals_per_day,
+            cuisine_type=data.cuisine_type,
+            veganity=data.veganity,
+            restricted_ingredients=data.restricted_ingredients,
+            diet_plan=diet_plan,
+        )
+    except DietPlan.DoesNotExist:
+        create_diet_plan.retry(
+            countdown=5, max_retries=3, kwargs={"data": data.to_json()}
+        )
+        return
+    return
 
-    diet_plan = DietPlan.objects.create(user=user, name="Sample Diet Plan")
-    # Create related Day instances
+
+def algorithm(
+    days: int,
+    meals_per_day: int,
+    cuisine_type: str,
+    veganity: Dict[str, bool],
+    restricted_ingredients: List[str],
+    diet_plan: DietPlan,
+):
     for i in range(1, 8):  # Assuming a 7-day diet plan
         Day.objects.create(diet_plan=diet_plan, day_number=i)
 
     # Create Ingredients (you can also fetch existing ingredients)
-    ingredient1 = Ingredient.objects.get_or_create(name="Ingredient 1")
-    ingredient2 = Ingredient.objects.get_or_create(name="Ingredient 2")
+    ingredient1, _ = Ingredient.objects.get_or_create(name="Ingredient 1")
+    ingredient2, _ = Ingredient.objects.get_or_create(name="Ingredient 2")
 
     # Create Meal instances
     meal1, created = Meal.objects.get_or_create(
@@ -61,5 +85,5 @@ def create_diet_plan(data):
         meal1.ingredients.add(ingredient1, ingredient2)
     for day in diet_plan.days.all():
         DayMeal.objects.create(day=day, meal=meal1, meal_type="Breakfast")
-    sleep(10)
-    return data
+        sleep(2)
+    DietPlan.objects.filter(id=diet_plan.id).update(generated=True)

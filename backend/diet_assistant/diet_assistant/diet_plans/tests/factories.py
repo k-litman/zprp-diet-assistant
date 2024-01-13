@@ -1,3 +1,7 @@
+import random
+
+from django.db import models
+
 import factory
 
 from diet_assistant.diet_plans.choices import CuisineType, MealType, Veganity
@@ -16,6 +20,7 @@ class IngredientFactory(factory.django.DjangoModelFactory):
 class DietPlanFactory(factory.django.DjangoModelFactory):
     user = factory.SubFactory(UserFactory)
     name = factory.Sequence(lambda n: f"Diet Plan {n}")
+    generated = True
 
     class Meta:
         model = DietPlan
@@ -53,8 +58,16 @@ class MealFactory(factory.django.DjangoModelFactory):
 class DayMealFactory(factory.django.DjangoModelFactory):
     day = factory.SubFactory(DayFactory)
     meal = factory.SubFactory(MealFactory)
-    meal_type = factory.Iterator(MealType.choices)
+    meal_type = factory.LazyFunction(lambda: get_random_choice(MealType))
 
     class Meta:
         model = DayMeal
         django_get_or_create = ("meal_type",)
+
+
+def get_random_choice(choices_class):
+    if not issubclass(choices_class, models.Choices):
+        raise ValueError("Provided class is not a subclass of django.db.models.Choices")
+
+    choices = choices_class.choices
+    return random.choice(choices)[0]  # Return the value part of the choice
