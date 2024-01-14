@@ -2,10 +2,9 @@ import json
 
 from dataclasses import asdict, dataclass
 
-from celery import shared_task
-
 from diet_assistant.diet_plans.choices import DietPlanStatus, MealType
 from diet_assistant.diet_plans.models import Day, DayMeal, DietPlan, Meal
+from diet_assistant.taskapp.celery import app
 
 
 @dataclass
@@ -33,10 +32,13 @@ class CreateDietPlanCeleryTaskData:
         return CreateDietPlanCeleryTaskData.from_dict(json.loads(data_json))
 
 
-@shared_task
-def create_diet_plan(data):
+@app.task(bind=True)
+def create_diet_plan(self, data):
     data = CreateDietPlanCeleryTaskData.from_json(data)
-    diet_plan = DietPlan.objects.get(id=data.plan_id)
+    try:
+        diet_plan = DietPlan.objects.get(id=data.plan_id)
+    except DietPlan.DoesNotExist:
+        self.retry(countdown=5)
 
     Day.objects.bulk_create(
         [
@@ -45,20 +47,25 @@ def create_diet_plan(data):
         ]
     )
 
-    possible_meals = Meal.objects.filter(
-        cuisine_type=data.cuisine_type, veganity=data.veganity
-    ).exclude(ingredients__name__in=data.restricted_ingredients)
+    possible_meals = Meal.objects.exclude(
+        ingredients__name__in=data.restricted_ingredients
+    )
+    if data.cuisine_type and data.cuisine_type != "any":
+        possible_meals = possible_meals.filter(cuisine_type=data.cuisine_type)
 
-    # group meals in 'days' packs of 'meals_per_day', as close to desired calories as possible
-    calories_per_meal = data.calories / data.meals_per_day
+    for key, value in data.veganity.items():
+        if value:
+            possible_meals = possible_meals.filter(veganity=key)
+        else:
+            possible_meals = possible_meals.exclude(veganity=key)
 
     match data.meals_per_day:
         case 3:
             meals = [MealType.BREAKFAST, MealType.LUNCH, MealType.DINNER]
             calories_per_meal = [
-                calories_per_meal * 0.2,
-                calories_per_meal * 0.4,
-                calories_per_meal * 0.4,
+                data.calories * 0.2,
+                data.calories * 0.4,
+                data.calories * 0.4,
             ]
         case 4:
             meals = [
@@ -68,10 +75,10 @@ def create_diet_plan(data):
                 MealType.DINNER,
             ]
             calories_per_meal = [
-                calories_per_meal * 0.2,
-                calories_per_meal * 0.2,
-                calories_per_meal * 0.4,
-                calories_per_meal * 0.2,
+                data.calories * 0.2,
+                data.calories * 0.2,
+                data.calories * 0.4,
+                data.calories * 0.2,
             ]
         case 5:
             meals = [
@@ -82,11 +89,11 @@ def create_diet_plan(data):
                 MealType.DINNER,
             ]
             calories_per_meal = [
-                calories_per_meal * 0.2,
-                calories_per_meal * 0.2,
-                calories_per_meal * 0.4,
-                calories_per_meal * 0.1,
-                calories_per_meal * 0.1,
+                data.calories * 0.2,
+                data.calories * 0.2,
+                data.calories * 0.4,
+                data.calories * 0.1,
+                data.calories * 0.1,
             ]
         case _:
             diet_plan.error_message = "Invalid number of meals per day"
@@ -95,9 +102,7 @@ def create_diet_plan(data):
             return
 
     for day in diet_plan.days.all():
-        for meal_type, calories, order in zip(
-            meals, calories_per_meal, range(1, data.meals_per_day + 1)
-        ):
+        for meal_type, calories in zip(meals, calories_per_meal):
             meal = (
                 possible_meals.filter(
                     calories__gte=calories * 0.9, calories__lte=calories * 1.1
@@ -111,7 +116,7 @@ def create_diet_plan(data):
                 diet_plan.status = DietPlanStatus.FAILED
                 diet_plan.save()
                 return
-            DayMeal.objects.create(day=day, meal=meal, meal_type=meal_type, order=order)
+            DayMeal.objects.create(day=day, meal=meal, meal_type=meal_type)
 
     diet_plan.status = DietPlanStatus.GENERATED
     diet_plan.save()
