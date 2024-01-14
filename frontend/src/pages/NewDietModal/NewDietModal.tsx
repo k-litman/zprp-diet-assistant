@@ -3,7 +3,7 @@ import { useQueryClient } from 'react-query';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { capitalize } from 'lodash';
 import axios from 'axios';
-import { client } from '@/api';
+import { API_KEYS, client } from '@/api';
 
 interface ErrorResponse {
     code: string;
@@ -48,7 +48,7 @@ const NewDietModal = () => {
             await client.post('/diets/diet-plans/', newDiet, {
                 headers: { Authorization: `Bearer ${authToken}` },
             });
-            queryClient.invalidateQueries('diets');
+            queryClient.invalidateQueries(API_KEYS.DIET_PLANS);
             modalRef.current.close();
         } catch (error) {
             if (
