@@ -43,16 +43,18 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
     def create(self, request, *args, **kwargs):
         post_serializer = DietPlanCreateSerializer(data=request.data)
         post_serializer.is_valid(raise_exception=True)
+
         data = post_serializer.validated_data
 
-        diet_plan = DietPlan.objects.create(
+        plan = DietPlan.objects.create(
             user=request.user,
             name=data["name"],
-            generated=False,
         )
+        plan.save()
+
         create_diet_plan.delay(
             CreateDietPlanCeleryTaskData(
-                plan_id=diet_plan.id,
+                plan_id=plan.id,
                 days=data["days"],
                 meals_per_day=data["meals_per_day"],
                 cuisine_type=data["cuisine_type"],
@@ -62,8 +64,9 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
             ).to_json()
         )
 
-        serializer = DietPlanSerializer(diet_plan)
-        return Response(serializer.data)
+        headers = self.get_success_headers({})
+        serializer = DietPlanSerializer(plan)
+        return Response(serializer.data, status=status.HTTP_200_OK, headers=headers)
 
 
 class IngredientsViewSet(viewsets.ReadOnlyModelViewSet):
