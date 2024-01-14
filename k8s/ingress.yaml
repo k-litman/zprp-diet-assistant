@@ -13,8 +13,19 @@ spec:
   tls:
     - hosts:  
       - api.zprp.fridaydeployment.com
-      secretName: api-zprp-diet-assistant-tls
+      - zprp.fridaydeployment.com
+      secretName: zprp-diet-assistant-tls
   rules:
+    - host: zprp.fridaydeployment.com
+      http:
+        paths:
+          - path: /
+            pathType: Prefix
+            backend:
+              service:
+                name: frontend
+                port:
+                  number: 4173
     - host: api.zprp.fridaydeployment.com
       http:
         paths:
