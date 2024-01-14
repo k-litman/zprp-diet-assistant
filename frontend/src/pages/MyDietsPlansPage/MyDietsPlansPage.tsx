@@ -4,6 +4,7 @@ import { useQuery } from 'react-query';
 import LoadingPage from '../LoadingPage';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import ErrorPage from '../ErrorPage';
+import { DIET_MOCK } from '@/__mocks__/dietMock';
 
 const fetchDiets = async (token: string) => {
     const { data } = await client.get('/diets/diet-plans/', {
