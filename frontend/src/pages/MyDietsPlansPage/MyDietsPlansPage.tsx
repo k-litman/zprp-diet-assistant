@@ -4,10 +4,9 @@ import { useQuery } from 'react-query';
 import LoadingPage from '../LoadingPage';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import ErrorPage from '../ErrorPage';
-import axios from 'axios';
 
 const fetchDiets = async (token: string) => {
-    const { data } = await axios.get('/api/diets/diet-plans/', {
+    const { data } = await client.get('/api/diets/diet-plans/', {
         headers: { Authorization: `Bearer ${token}` },
     });
     return data;
