@@ -6,7 +6,7 @@ import { useAppSelector } from '@/hooks/useAppSelector';
 import ErrorPage from '../ErrorPage';
 
 const fetchDiets = async (token: string) => {
-    const { data } = await client.get('/api/diets/diet-plans/', {
+    const { data } = await client.get('/diets/diet-plans/', {
         headers: { Authorization: `Bearer ${token}` },
     });
     return data;

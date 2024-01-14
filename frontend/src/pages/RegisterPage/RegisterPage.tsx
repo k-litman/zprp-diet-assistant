@@ -10,7 +10,7 @@ interface RegistrationDetails {
 }
 
 const register = async (registrationDetails: RegistrationDetails) => {
-    const response = await client.post('/api/users/', registrationDetails);
+    const response = await client.post('/users/', registrationDetails);
     return response.data;
 };
 
