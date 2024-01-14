@@ -137,7 +137,7 @@ jobs:
           git commit -m "Update image tags in k8s"
           git push
   deploy:
-    needs: update-image-tags
+    needs: [update-image-tags, build-backend, build-frontend]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
