@@ -68,6 +68,14 @@ class MyDietPlansViewSet(viewsets.ModelViewSet):
         serializer = DietPlanSerializer(plan)
         return Response(serializer.data, status=status.HTTP_200_OK, headers=headers)
 
+    def destroy(self, request, *args, **kwargs):
+        instance = self.get_object()
+        if instance.user != request.user and not request.user.is_superuser:
+            return Response(status=status.HTTP_403_FORBIDDEN)
+        self.perform_destroy(instance)
+
+        return Response(status=status.HTTP_204_NO_CONTENT)
+
 
 class IngredientsViewSet(viewsets.ReadOnlyModelViewSet):
     serializer_class = IngredientSerializer
