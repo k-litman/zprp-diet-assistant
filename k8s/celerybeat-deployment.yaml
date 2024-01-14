@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: celerybeat
-          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-06ff659
+          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-213846e
           command:
             - /start-celerybeat.sh
           ports:
