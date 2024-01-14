@@ -135,7 +135,7 @@ jobs:
           git add ./k8s/celerybeat-deployment.yaml
           git add ./k8s/frontend-deployment.yaml
           git commit -m "Update image tags in k8s"
-          git push origin HEAD:main
+          git push
   deploy:
     needs: update-image-tags
     runs-on: ubuntu-latest
