@@ -1,0 +1,7 @@
+dayId:
+  name: dayId
+  in: path
+  required: true
+  description: The ID of the day in a diet plan
+  schema:
+    type: integer

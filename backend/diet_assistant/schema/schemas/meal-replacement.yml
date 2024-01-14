@@ -1,0 +1,8 @@
+MealReplacement:
+  type: object
+  required:
+    - id
+  properties:
+    id:
+      type: integer
+      description: The ID of the meal to be used as a replacement

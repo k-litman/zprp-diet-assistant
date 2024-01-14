@@ -1,0 +1,80 @@
+DietPlanListExample:
+  count: 1
+  next: null
+  previous: null
+  results:
+    - id: 3
+      name: "afasasf"
+      days:
+        - id: 15
+          day_number: 1
+          meals:
+            - id: 15
+              meal_type: "Breakfast"
+              meal:
+                id: 121
+                name: "Meal 1"
+                description: "Delicious meal 1 description"
+                calories: 500
+                cuisine_type: "Italian"
+                veganity: "Vegan"
+                ingredients:
+                  - id: 151
+                    name: "Ingredient 1"
+                  - id: 152
+                    name: "Ingredient 2"
+        # ... Additional days with similar structure
+      generated: true
+
+DietPlanExample:
+  id: 3
+  name: "afasasf"
+  days:
+    - id: 15
+      day_number: 1
+      meals:
+        - id: 15
+          meal_type: "Breakfast"
+          meal:
+            id: 121
+            name: "Meal 1"
+            description: "Delicious meal 1 description"
+            calories: 500
+            cuisine_type: "Italian"
+            veganity: "Vegan"
+            ingredients:
+              - id: 151
+                name: "Ingredient 1"
+              - id: 152
+                name: "Ingredient 2"
+    # ... Additional days with similar structure
+  generated: true
+
+IngredientListExample:
+  count: 77
+  next: null
+  previous: null
+  results:
+    - id: 151
+      name: "Ingredient 1"
+    # Additional ingredients
+
+MealListExample:
+  count: 60
+  next: null
+  previous: null
+  results:
+    - id: 122
+      name: "Classic Margherita Pizza"
+      description: "A traditional Italian pizza with fresh tomatoes, mozzarella cheese, and basil."
+      calories: 300
+      cuisine_type: "it"
+      veganity: "vegetarian"
+      ingredients:
+        - id: 160
+          name: "Basil"
+        - id: 207
+          name: "Cheese"
+        - id: 224
+          name: "Tomato"
+    # Additional meals

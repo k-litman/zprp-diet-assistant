@@ -1,0 +1,111 @@
+DietPlanList:
+  type: object
+  properties:
+    count:
+      type: integer
+    next:
+      type: string
+      nullable: true
+    previous:
+      type: string
+      nullable: true
+    results:
+      type: array
+      items:
+        $ref: '#/DietPlan'
+
+DietPlan:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    days:
+      type: array
+      items:
+        $ref: '#/Day'
+    generated:
+      type: boolean
+
+Day:
+  type: object
+  properties:
+    id:
+      type: integer
+    day_number:
+      type: integer
+    meals:
+      type: array
+      items:
+        $ref: '#/MealEntry'
+
+MealEntry:
+  type: object
+  properties:
+    id:
+      type: integer
+    meal_type:
+      type: string
+    meal:
+      $ref: '#/Meal'
+
+Meal:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    description:
+      type: string
+    calories:
+      type: integer
+    cuisine_type:
+      type: string
+    veganity:
+      type: string
+    ingredients:
+      type: array
+      items:
+        $ref: '#/Ingredient'
+
+Ingredient:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+
+IngredientList:
+  type: object
+  properties:
+    count:
+      type: integer
+    next:
+      type: string
+      nullable: true
+    previous:
+      type: string
+      nullable: true
+    results:
+      type: array
+      items:
+        $ref: '#/Ingredient'
+
+MealList:
+  type: object
+  properties:
+    count:
+      type: integer
+    next:
+      type: string
+      nullable: true
+    previous:
+      type: string
+      nullable: true
+    results:
+      type: array
+      items:
+        $ref: '#/Meal'

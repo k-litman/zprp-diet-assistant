@@ -1,0 +1,43 @@
+MealList:
+  type: object
+  properties:
+    count:
+      type: integer
+    next:
+      type: string
+      nullable: true
+    previous:
+      type: string
+      nullable: true
+    results:
+      type: array
+      items:
+        $ref: '#/Meal'
+
+Meal:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string
+    description:
+      type: string
+    calories:
+      type: integer
+    cuisine_type:
+      type: string
+    veganity:
+      type: string
+    ingredients:
+      type: array
+      items:
+        $ref: '#/Ingredient'
+
+Ingredient:
+  type: object
+  properties:
+    id:
+      type: integer
+    name:
+      type: string

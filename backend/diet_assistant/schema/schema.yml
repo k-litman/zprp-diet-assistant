@@ -1,8 +1,8 @@
 openapi: 3.0.1
 info:
-  title: 'test'
-  description: 'A short description of the project.'
-  version: '0.1.0'
+  title: 'diet-assistant'
+  description: 'Diet assistant API'
+  version: '1.0.0'
 servers:
   - url: /
 paths:
@@ -10,9 +10,17 @@ paths:
     $ref: 'paths/users.yml#/list_create'
   /users/{user_id}/:
     $ref: 'paths/users.yml#/detail_delete'
-#  /diets/meals:
-#    $ref: 'paths/diets.yml#/get_meals'
-#  /diets/ingredients:
-#    $ref: 'paths/diets.yml#/get_ingredients'
-#  /diets/diet-plans:
-#    $ref: 'paths/diets.yml#/diet_plans'
+  /users/login/:
+    $ref: 'paths/users.yml#/login'
+  /users/logout/:
+    $ref: 'paths/users.yml#/logout'
+  /diets/diet-plans/:
+    $ref: 'paths/diets.yml#/list_create'
+  /diets/diet-plans/{dietPlanId}/:
+    $ref: 'paths/diets.yml#/replace_meal_in_diet_plan'
+  /diets/ingredients/:
+    $ref: 'paths/diets.yml#/ingredient'
+  /diets/meals/:
+    $ref: 'paths/diets.yml#/meal'
+  /diets/meals/{mealId}/:
+    $ref: 'paths/diets.yml#/meal_by_id'

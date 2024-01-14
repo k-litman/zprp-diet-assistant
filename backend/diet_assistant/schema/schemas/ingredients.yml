@@ -1,0 +1,29 @@
+Ingredient:
+  type: object
+  properties:
+    id:
+      type: integer
+      description: The unique identifier for the ingredient.
+    name:
+      type: string
+      description: The name of the ingredient.
+
+IngredientList:
+  type: object
+  properties:
+    count:
+      type: integer
+      description: The total number of ingredients available.
+    next:
+      type: string
+      nullable: true
+      description: A link to the next page of ingredients (if applicable).
+    previous:
+      type: string
+      nullable: true
+      description: A link to the previous page of ingredients (if applicable).
+    results:
+      type: array
+      items:
+        $ref: '#/Ingredient'
+      description: A list of ingredients.

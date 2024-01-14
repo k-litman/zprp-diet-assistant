@@ -1,0 +1,7 @@
+dietPlanId:
+  name: dietPlanId
+  in: path
+  required: true
+  description: The ID of the diet plan
+  schema:
+    type: integer
