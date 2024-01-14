@@ -5,6 +5,7 @@ import { useQuery } from 'react-query';
 import LoadingPage from '../LoadingPage';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import ErrorPage from '../ErrorPage';
+import { DIET_MOCK } from '@/__mocks__/dietMock';
 
 const fetchDiets = async (token: string) => {
     const { data } = await axios.get('/api/diets/diet-plans/', {
@@ -24,13 +25,34 @@ const MyDietsPlansPage = () => {
 
     if (isLoading) return <LoadingPage title="Loading your diets..." />;
 
-    return (
-        <div>
-            {/* {diets.map((diet) => (
-                <div key={diet.id}>{diet.name}</div>
-            ))} */}
-            {<NewDietModal />}
+    const renderedDiets = DIET_MOCK.map((diet) => (
+        <div
+            key={diet.id}
+            className="border-secondary border-solid border-2 rounded mt-3 p-6 w-fit"
+        >
+            <h3>DIET NAME: {diet.name}</h3>
+            {diet.days.map((day) => (
+                <div key={day.id}>
+                    <h4 className="font-bold">Day {day.day_number}</h4>
+                    {day.meals.map((meal) => (
+                        <div key={meal.id}>
+                            <p>
+                                {meal.meal_type}: {meal.meal.name}
+                            </p>
+                            <p>{meal.meal.description}</p>
+                            <p>Calories: {meal.meal.calories}</p>
+                        </div>
+                    ))}
+                </div>
+            ))}
         </div>
+    ));
+
+    return (
+        <>
+            <NewDietModal />
+            <div className="flex gap-4">{renderedDiets}</div>
+        </>
     );
 };
 
