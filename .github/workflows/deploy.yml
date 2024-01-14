@@ -116,7 +116,7 @@ jobs:
             VITE_API_URL=https://api.zprp.fridaydeployment.com
     outputs:
       tags: ${{ steps.meta.outputs.tags }}
-  update-image-tags:
+  deploy:
     needs: [build-backend, build-frontend]
     runs-on: ubuntu-latest
     steps:
@@ -136,12 +136,6 @@ jobs:
           git add ./k8s/frontend-deployment.yaml
           git commit -m "Update image tags in k8s"
           git push origin HEAD:main
-  deploy:
-    needs: update-image-tags
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v2
       - name: Set up kubectl
         uses: azure/setup-kubectl@v3
       - name: Configure kubectl
