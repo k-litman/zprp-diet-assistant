@@ -8,14 +8,4 @@ export default defineConfig({
     resolve: {
         alias: [{ find: '@', replacement: path.resolve(__dirname, 'src') }],
     },
-    server: {
-        proxy: {
-            '/api': {
-                target: 'https://api.zprp.fridaydeployment.com/',
-                changeOrigin: true,
-                secure: false,
-                rewrite: (path) => path.replace(/^\/api/, ''),
-            },
-        },
-    },
 });

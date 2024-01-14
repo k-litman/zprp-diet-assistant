@@ -1,4 +1,4 @@
-import axios from 'axios';
+import { client } from '@/api';
 import React from 'react';
 import { useMutation } from 'react-query';
 import { useNavigate } from 'react-router-dom';
@@ -10,7 +10,7 @@ interface RegistrationDetails {
 }
 
 const register = async (registrationDetails: RegistrationDetails) => {
-    const response = await axios.post('/api/users/', registrationDetails);
+    const response = await client.post('/api/users/', registrationDetails);
     return response.data;
 };
 
