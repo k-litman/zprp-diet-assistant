@@ -3,7 +3,7 @@ import { useMutation } from 'react-query';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setAuthToken, setIsLoggedIn } from '@/store/appSlice';
 import { Link, useNavigate } from 'react-router-dom';
-import { client } from '@/api';
+import axios from 'axios';
 
 interface UserDetails {
     username: string;
@@ -15,8 +15,8 @@ interface LoginResponse {
 }
 
 const login = async (userDetails: UserDetails) => {
-    const { data } = await client.post<LoginResponse>(
-        '/users/login/',
+    const { data } = await axios.post<LoginResponse>(
+        '/api/users/login/',
         userDetails
     );
 
