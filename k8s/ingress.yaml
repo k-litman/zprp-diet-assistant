@@ -11,7 +11,7 @@ metadata:
 spec:
   ingressClassName: nginx
   tls:
-    - hosts:
+    - hosts:  
       - api.zprp.fridaydeployment.com
       secretName: api-zprp-diet-assistant-tls
   rules:
