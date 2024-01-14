@@ -316,9 +316,8 @@ Po zainstalowaniu docker oraz docker-compose, należy uruchomić aplikację przy
 ```bash
 docker-compose up --build
 ```
-W przypadku udanego uruchomienia aplikacji, API znajduję się pod adresem *http://0.0.0.0:9000/*, a frontend pod adresem
-http:// 
-**<font color="red">TODO dodać adres frontendu</font>**
+W przypadku udanego uruchomienia aplikacji, API znajduję się pod adresem *http://0.0.0.0:8000/*, a frontend pod adresem
+*http://127.0.0.1:5713*.
 
 W celu łatwiejszego korzystania z API, została przygotowana dokumentacja w formacie OpenAPI, 
 dostępna pod adresem *http://0.0.0.0:8000/docs/* , oraz kolekcja Postman znajdująca się w pliku `ZPRP.postman_collection.json`.
