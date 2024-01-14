@@ -2,6 +2,7 @@ import { client } from '@/api';
 import React from 'react';
 import { useMutation } from 'react-query';
 import { useNavigate } from 'react-router-dom';
+import { client } from '@/api';
 
 interface RegistrationDetails {
     username: string;
