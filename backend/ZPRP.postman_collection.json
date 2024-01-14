@@ -21,7 +21,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/diet-plan/",
+					"raw": "http://0.0.0.0:8000/diets/diet-plans/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -32,7 +32,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"diet-plan",
+						"diet-plans",
 						""
 					]
 				}
@@ -45,7 +45,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/diet-plan/",
+					"raw": "http://0.0.0.0:8000/diets/diet-plans/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -56,7 +56,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"diet-plan",
+						"diet-plans",
 						""
 					]
 				}
@@ -93,7 +93,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/ingredient/",
+					"raw": "http://0.0.0.0:8000/diets/ingredients/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -104,7 +104,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"ingredient",
+						"ingredients",
 						""
 					],
 					"query": [
@@ -124,7 +124,7 @@
 				"method": "GET",
 				"header": [],
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/meal",
+					"raw": "http://0.0.0.0:8000/diets/meals/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -135,7 +135,8 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"meal"
+						"meals",
+						""
 					]
 				}
 			},
@@ -151,7 +152,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"new_user\",\n    \"password\": \"12345678\",\n    \"email\": \"test@1mail.com\"\n}",
+					"raw": "{\n    \"username\": \"new_1user\",\n    \"password\": \"asd\",\n    \"email\": \"test@1mail.com\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -197,7 +198,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\n    \"username\": \"new_user\",\n    \"password\": \"12345678\"\n}",
+					"raw": "{\n    \"username\": \"new_1user\",\n    \"password\": \"asd\"\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -262,7 +263,7 @@
 					}
 				},
 				"url": {
-					"raw": "http://0.0.0.0:8000/diets/diet-plan/213/day/389/meal/382/replace/",
+					"raw": "http://0.0.0.0:8000/diets/diet-plans/213/day/389/meal/382/replace/",
 					"protocol": "http",
 					"host": [
 						"0",
@@ -273,7 +274,7 @@
 					"port": "8000",
 					"path": [
 						"diets",
-						"diet-plan",
+						"diet-plans",
 						"213",
 						"day",
 						"389",
@@ -292,7 +293,7 @@
 		"bearer": [
 			{
 				"key": "token",
-				"value": "9f17462a2c3e33bae1dc4a995452d5953f5a9ad5",
+				"value": "5dd294beb69468584aa2295ba521041c6b633961",
 				"type": "string"
 			}
 		]

@@ -1,0 +1,2187 @@
+[
+  {
+    "model": "auth.permission",
+    "pk": 1,
+    "fields": {
+      "name": "Can add permission",
+      "content_type": 1,
+      "codename": "add_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 2,
+    "fields": {
+      "name": "Can change permission",
+      "content_type": 1,
+      "codename": "change_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 3,
+    "fields": {
+      "name": "Can delete permission",
+      "content_type": 1,
+      "codename": "delete_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 4,
+    "fields": {
+      "name": "Can view permission",
+      "content_type": 1,
+      "codename": "view_permission"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 5,
+    "fields": {
+      "name": "Can add group",
+      "content_type": 2,
+      "codename": "add_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 6,
+    "fields": {
+      "name": "Can change group",
+      "content_type": 2,
+      "codename": "change_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 7,
+    "fields": {
+      "name": "Can delete group",
+      "content_type": 2,
+      "codename": "delete_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 8,
+    "fields": {
+      "name": "Can view group",
+      "content_type": 2,
+      "codename": "view_group"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 9,
+    "fields": {
+      "name": "Can add content type",
+      "content_type": 3,
+      "codename": "add_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 10,
+    "fields": {
+      "name": "Can change content type",
+      "content_type": 3,
+      "codename": "change_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 11,
+    "fields": {
+      "name": "Can delete content type",
+      "content_type": 3,
+      "codename": "delete_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 12,
+    "fields": {
+      "name": "Can view content type",
+      "content_type": 3,
+      "codename": "view_contenttype"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 13,
+    "fields": {
+      "name": "Can add session",
+      "content_type": 4,
+      "codename": "add_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 14,
+    "fields": {
+      "name": "Can change session",
+      "content_type": 4,
+      "codename": "change_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 15,
+    "fields": {
+      "name": "Can delete session",
+      "content_type": 4,
+      "codename": "delete_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 16,
+    "fields": {
+      "name": "Can view session",
+      "content_type": 4,
+      "codename": "view_session"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 17,
+    "fields": {
+      "name": "Can add site",
+      "content_type": 5,
+      "codename": "add_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 18,
+    "fields": {
+      "name": "Can change site",
+      "content_type": 5,
+      "codename": "change_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 19,
+    "fields": {
+      "name": "Can delete site",
+      "content_type": 5,
+      "codename": "delete_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 20,
+    "fields": {
+      "name": "Can view site",
+      "content_type": 5,
+      "codename": "view_site"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 21,
+    "fields": {
+      "name": "Can add log entry",
+      "content_type": 6,
+      "codename": "add_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 22,
+    "fields": {
+      "name": "Can change log entry",
+      "content_type": 6,
+      "codename": "change_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 23,
+    "fields": {
+      "name": "Can delete log entry",
+      "content_type": 6,
+      "codename": "delete_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 24,
+    "fields": {
+      "name": "Can view log entry",
+      "content_type": 6,
+      "codename": "view_logentry"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 25,
+    "fields": {
+      "name": "Can add test model",
+      "content_type": 7,
+      "codename": "add_testmodel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 26,
+    "fields": {
+      "name": "Can change test model",
+      "content_type": 7,
+      "codename": "change_testmodel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 27,
+    "fields": {
+      "name": "Can delete test model",
+      "content_type": 7,
+      "codename": "delete_testmodel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 28,
+    "fields": {
+      "name": "Can view test model",
+      "content_type": 7,
+      "codename": "view_testmodel"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 29,
+    "fields": {
+      "name": "Can add Token",
+      "content_type": 8,
+      "codename": "add_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 30,
+    "fields": {
+      "name": "Can change Token",
+      "content_type": 8,
+      "codename": "change_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 31,
+    "fields": {
+      "name": "Can delete Token",
+      "content_type": 8,
+      "codename": "delete_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 32,
+    "fields": {
+      "name": "Can view Token",
+      "content_type": 8,
+      "codename": "view_token"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 33,
+    "fields": {
+      "name": "Can add token",
+      "content_type": 9,
+      "codename": "add_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 34,
+    "fields": {
+      "name": "Can change token",
+      "content_type": 9,
+      "codename": "change_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 35,
+    "fields": {
+      "name": "Can delete token",
+      "content_type": 9,
+      "codename": "delete_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 36,
+    "fields": {
+      "name": "Can view token",
+      "content_type": 9,
+      "codename": "view_tokenproxy"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 37,
+    "fields": {
+      "name": "Can add user",
+      "content_type": 10,
+      "codename": "add_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 38,
+    "fields": {
+      "name": "Can change user",
+      "content_type": 10,
+      "codename": "change_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 39,
+    "fields": {
+      "name": "Can delete user",
+      "content_type": 10,
+      "codename": "delete_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 40,
+    "fields": {
+      "name": "Can view user",
+      "content_type": 10,
+      "codename": "view_user"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 41,
+    "fields": {
+      "name": "Can add ingredient",
+      "content_type": 11,
+      "codename": "add_ingredient"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 42,
+    "fields": {
+      "name": "Can change ingredient",
+      "content_type": 11,
+      "codename": "change_ingredient"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 43,
+    "fields": {
+      "name": "Can delete ingredient",
+      "content_type": 11,
+      "codename": "delete_ingredient"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 44,
+    "fields": {
+      "name": "Can view ingredient",
+      "content_type": 11,
+      "codename": "view_ingredient"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 45,
+    "fields": {
+      "name": "Can add diet plan",
+      "content_type": 12,
+      "codename": "add_dietplan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 46,
+    "fields": {
+      "name": "Can change diet plan",
+      "content_type": 12,
+      "codename": "change_dietplan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 47,
+    "fields": {
+      "name": "Can delete diet plan",
+      "content_type": 12,
+      "codename": "delete_dietplan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 48,
+    "fields": {
+      "name": "Can view diet plan",
+      "content_type": 12,
+      "codename": "view_dietplan"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 49,
+    "fields": {
+      "name": "Can add day",
+      "content_type": 13,
+      "codename": "add_day"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 50,
+    "fields": {
+      "name": "Can change day",
+      "content_type": 13,
+      "codename": "change_day"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 51,
+    "fields": {
+      "name": "Can delete day",
+      "content_type": 13,
+      "codename": "delete_day"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 52,
+    "fields": {
+      "name": "Can view day",
+      "content_type": 13,
+      "codename": "view_day"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 53,
+    "fields": {
+      "name": "Can add meal",
+      "content_type": 14,
+      "codename": "add_meal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 54,
+    "fields": {
+      "name": "Can change meal",
+      "content_type": 14,
+      "codename": "change_meal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 55,
+    "fields": {
+      "name": "Can delete meal",
+      "content_type": 14,
+      "codename": "delete_meal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 56,
+    "fields": {
+      "name": "Can view meal",
+      "content_type": 14,
+      "codename": "view_meal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 57,
+    "fields": {
+      "name": "Can add day meal",
+      "content_type": 15,
+      "codename": "add_daymeal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 58,
+    "fields": {
+      "name": "Can change day meal",
+      "content_type": 15,
+      "codename": "change_daymeal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 59,
+    "fields": {
+      "name": "Can delete day meal",
+      "content_type": 15,
+      "codename": "delete_daymeal"
+    }
+  },
+  {
+    "model": "auth.permission",
+    "pk": 60,
+    "fields": {
+      "name": "Can view day meal",
+      "content_type": 15,
+      "codename": "view_daymeal"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 1,
+    "fields": {
+      "app_label": "auth",
+      "model": "permission"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 2,
+    "fields": {
+      "app_label": "auth",
+      "model": "group"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 3,
+    "fields": {
+      "app_label": "contenttypes",
+      "model": "contenttype"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 4,
+    "fields": {
+      "app_label": "sessions",
+      "model": "session"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 5,
+    "fields": {
+      "app_label": "sites",
+      "model": "site"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 6,
+    "fields": {
+      "app_label": "admin",
+      "model": "logentry"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 7,
+    "fields": {
+      "app_label": "db",
+      "model": "testmodel"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 8,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "token"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 9,
+    "fields": {
+      "app_label": "authtoken",
+      "model": "tokenproxy"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 10,
+    "fields": {
+      "app_label": "users",
+      "model": "user"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 11,
+    "fields": {
+      "app_label": "diet_plans",
+      "model": "ingredient"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 12,
+    "fields": {
+      "app_label": "diet_plans",
+      "model": "dietplan"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 13,
+    "fields": {
+      "app_label": "diet_plans",
+      "model": "day"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 14,
+    "fields": {
+      "app_label": "diet_plans",
+      "model": "meal"
+    }
+  },
+  {
+    "model": "contenttypes.contenttype",
+    "pk": 15,
+    "fields": {
+      "app_label": "diet_plans",
+      "model": "daymeal"
+    }
+  },
+  {
+    "model": "sites.site",
+    "pk": 1,
+    "fields": {
+      "domain": "example.com",
+      "name": "example.com"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 1,
+    "fields": {
+      "name": "Peas"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 2,
+    "fields": {
+      "name": "Cabbage"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 3,
+    "fields": {
+      "name": "Soy Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 4,
+    "fields": {
+      "name": "Spinach"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 5,
+    "fields": {
+      "name": "Tomato Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 6,
+    "fields": {
+      "name": "Beef"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 7,
+    "fields": {
+      "name": "Corn Tortilla"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 8,
+    "fields": {
+      "name": "Cheese"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 9,
+    "fields": {
+      "name": "Pork"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 10,
+    "fields": {
+      "name": "Rice"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 11,
+    "fields": {
+      "name": "Veggie Patty"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 12,
+    "fields": {
+      "name": "Bulgogi Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 13,
+    "fields": {
+      "name": "Puff Pastry"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 14,
+    "fields": {
+      "name": "Salsa"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 15,
+    "fields": {
+      "name": "Rice Noodles"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 16,
+    "fields": {
+      "name": "Potato"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 17,
+    "fields": {
+      "name": "Saffron"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 18,
+    "fields": {
+      "name": "Balsamic Glaze"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 19,
+    "fields": {
+      "name": "Tomato"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 20,
+    "fields": {
+      "name": "Beet"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 21,
+    "fields": {
+      "name": "Paprika"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 22,
+    "fields": {
+      "name": "Ground Meat"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 23,
+    "fields": {
+      "name": "Onion"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 24,
+    "fields": {
+      "name": "Tuna"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 25,
+    "fields": {
+      "name": "Falafel"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 26,
+    "fields": {
+      "name": "Dough"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 27,
+    "fields": {
+      "name": "Bacon"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 28,
+    "fields": {
+      "name": "Lettuce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 29,
+    "fields": {
+      "name": "Zucchini"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 30,
+    "fields": {
+      "name": "Ricotta"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 31,
+    "fields": {
+      "name": "Chicken"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 32,
+    "fields": {
+      "name": "Tahini"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 33,
+    "fields": {
+      "name": "Beans"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 34,
+    "fields": {
+      "name": "Mozzarella"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 35,
+    "fields": {
+      "name": "Cherry Tomato"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 36,
+    "fields": {
+      "name": "Minced Meat"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 37,
+    "fields": {
+      "name": "Bun"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 38,
+    "fields": {
+      "name": "Basil"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 39,
+    "fields": {
+      "name": "Shrimp"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 40,
+    "fields": {
+      "name": "Chili Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 41,
+    "fields": {
+      "name": "Chili Pepper"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 42,
+    "fields": {
+      "name": "Curry Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 43,
+    "fields": {
+      "name": "Butternut Squash"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 44,
+    "fields": {
+      "name": "Fish"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 45,
+    "fields": {
+      "name": "Peanuts"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 46,
+    "fields": {
+      "name": "Teriyaki Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 47,
+    "fields": {
+      "name": "Eggplant"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 48,
+    "fields": {
+      "name": "Tortilla"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 49,
+    "fields": {
+      "name": "Flatbread"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 50,
+    "fields": {
+      "name": "Bread"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 51,
+    "fields": {
+      "name": "Lentils"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 52,
+    "fields": {
+      "name": "Pesto Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 53,
+    "fields": {
+      "name": "Vegetables"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 54,
+    "fields": {
+      "name": "Salmon"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 55,
+    "fields": {
+      "name": "Tamarind"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 56,
+    "fields": {
+      "name": "Egg"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 57,
+    "fields": {
+      "name": "Coleslaw"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 58,
+    "fields": {
+      "name": "Garlic"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 59,
+    "fields": {
+      "name": "Marinara Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 60,
+    "fields": {
+      "name": "Breadcrumbs"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 61,
+    "fields": {
+      "name": "Cream"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 62,
+    "fields": {
+      "name": "Noodles"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 63,
+    "fields": {
+      "name": "Alfredo Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 64,
+    "fields": {
+      "name": "Pine Nuts"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 65,
+    "fields": {
+      "name": "Carrot"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 66,
+    "fields": {
+      "name": "Cucumber"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 67,
+    "fields": {
+      "name": "Avocado"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 68,
+    "fields": {
+      "name": "Wasabi"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 69,
+    "fields": {
+      "name": "BBQ Sauce"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 70,
+    "fields": {
+      "name": "Pasta"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 71,
+    "fields": {
+      "name": "Sour Cream"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 72,
+    "fields": {
+      "name": "Tempura Batter"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 73,
+    "fields": {
+      "name": "Tofu"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 74,
+    "fields": {
+      "name": "Bell Pepper"
+    }
+  },
+  {
+    "model": "diet_plans.ingredient",
+    "pk": 75,
+    "fields": {
+      "name": "Mushroom"
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 1,
+    "fields": {
+      "name": "Classic Margherita Pizza",
+      "description": "A traditional Italian pizza with fresh tomatoes, mozzarella cheese, and basil.",
+      "calories": 300,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        8,
+        19,
+        38
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 2,
+    "fields": {
+      "name": "Chicken Caesar Salad",
+      "description": "A rich salad with roasted chicken breast, romaine lettuce, and Caesar dressing.",
+      "calories": 450,
+      "cuisine_type": "fr",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        28,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 3,
+    "fields": {
+      "name": "Vegan Bean Chili",
+      "description": "A spicy and hearty bean chili, perfect for vegan diets.",
+      "calories": 350,
+      "cuisine_type": "mx",
+      "veganity": "vegan",
+      "ingredients": [
+        33,
+        74,
+        58,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 4,
+    "fields": {
+      "name": "Beef Bourguignon",
+      "description": "A classic French stew made with beef, mushrooms, and red wine.",
+      "calories": 600,
+      "cuisine_type": "fr",
+      "veganity": "meat",
+      "ingredients": [
+        58,
+        75,
+        6,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 5,
+    "fields": {
+      "name": "Tuna Sushi Roll",
+      "description": "Fresh tuna and cucumber rolled in sushi rice and seaweed.",
+      "calories": 250,
+      "cuisine_type": "as",
+      "veganity": "fish",
+      "ingredients": [
+        24,
+        10,
+        66
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 6,
+    "fields": {
+      "name": "Spaghetti Carbonara",
+      "description": "Classic Italian pasta dish with eggs, cheese, bacon, and black pepper.",
+      "calories": 500,
+      "cuisine_type": "it",
+      "veganity": "meat",
+      "ingredients": [
+        56,
+        8,
+        27,
+        70
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 7,
+    "fields": {
+      "name": "Vegetable Stir Fry",
+      "description": "A mix of stir-fried vegetables with soy sauce and garlic, served with rice.",
+      "calories": 350,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        74,
+        10,
+        58,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 8,
+    "fields": {
+      "name": "French Onion Soup",
+      "description": "A rich and flavorful soup made with caramelized onions and beef broth, topped with toasted bread and cheese.",
+      "calories": 400,
+      "cuisine_type": "fr",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        6,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 9,
+    "fields": {
+      "name": "Pierogi",
+      "description": "Traditional Polish dumplings filled with cheese and potato, served with a dollop of sour cream.",
+      "calories": 450,
+      "cuisine_type": "pl",
+      "veganity": "vegetarian",
+      "ingredients": [
+        8,
+        16,
+        71
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 10,
+    "fields": {
+      "name": "Grilled Shrimp Tacos",
+      "description": "Grilled shrimp in a soft taco shell, topped with salsa and lettuce.",
+      "calories": 300,
+      "cuisine_type": "mx",
+      "veganity": "fish",
+      "ingredients": [
+        19,
+        28,
+        39
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 11,
+    "fields": {
+      "name": "Mushroom Risotto",
+      "description": "Creamy Italian risotto cooked with assorted mushrooms and parmesan cheese.",
+      "calories": 480,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        8,
+        10,
+        75
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 12,
+    "fields": {
+      "name": "Pork Goulash",
+      "description": "A hearty stew of pork, onions, and paprika, served over egg noodles.",
+      "calories": 530,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        9,
+        21,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 13,
+    "fields": {
+      "name": "Chicken Tikka Masala",
+      "description": "Grilled chicken in a spiced tomato cream sauce, served with basmati rice.",
+      "calories": 450,
+      "cuisine_type": "as",
+      "veganity": "meat",
+      "ingredients": [
+        10,
+        19,
+        61,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 14,
+    "fields": {
+      "name": "Ratatouille",
+      "description": "A French vegetable stew with eggplant, zucchini, bell peppers, and tomato.",
+      "calories": 300,
+      "cuisine_type": "fr",
+      "veganity": "vegan",
+      "ingredients": [
+        74,
+        19,
+        29,
+        47
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 15,
+    "fields": {
+      "name": "Fish Tacos",
+      "description": "Battered and fried fish in corn tortillas with cabbage slaw and a creamy sauce.",
+      "calories": 320,
+      "cuisine_type": "mx",
+      "veganity": "fish",
+      "ingredients": [
+        2,
+        44,
+        7
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 16,
+    "fields": {
+      "name": "Beef Stroganoff",
+      "description": "Sautéed beef in a creamy mushroom sauce, served over egg noodles.",
+      "calories": 560,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        75,
+        61,
+        6
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 17,
+    "fields": {
+      "name": "Eggplant Parmesan",
+      "description": "Breaded eggplant slices baked with marinara sauce and mozzarella cheese.",
+      "calories": 410,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        8,
+        5,
+        47
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 18,
+    "fields": {
+      "name": "Vegetable Pad Thai",
+      "description": "Stir-fried rice noodles with vegetables and tofu, flavored with tamarind and peanuts.",
+      "calories": 400,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        73,
+        45,
+        15
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 19,
+    "fields": {
+      "name": "Quiche Lorraine",
+      "description": "A savory French tart with bacon, cheese, and egg custard in a pastry crust.",
+      "calories": 480,
+      "cuisine_type": "fr",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        56,
+        27
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 20,
+    "fields": {
+      "name": "Chicken Enchiladas",
+      "description": "Corn tortillas filled with chicken and cheese, topped with a red chili sauce.",
+      "calories": 450,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        40,
+        7,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 21,
+    "fields": {
+      "name": "Lentil Soup",
+      "description": "A nutritious soup made with lentils, carrots, and spices.",
+      "calories": 220,
+      "cuisine_type": "fr",
+      "veganity": "vegan",
+      "ingredients": [
+        65,
+        51,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 22,
+    "fields": {
+      "name": "Chicken Pad Thai",
+      "description": "A popular Thai dish with stir-fried rice noodles, chicken, and a tangy tamarind sauce.",
+      "calories": 400,
+      "cuisine_type": "as",
+      "veganity": "meat",
+      "ingredients": [
+        15,
+        55,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 23,
+    "fields": {
+      "name": "Vegetarian Lasagna",
+      "description": "Layers of pasta, ricotta, spinach, and marinara sauce, topped with melted mozzarella.",
+      "calories": 350,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        59,
+        4,
+        70,
+        30
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 24,
+    "fields": {
+      "name": "Beef Tacos",
+      "description": "Seasoned beef in crispy taco shells, topped with lettuce, cheese, and salsa.",
+      "calories": 300,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        28,
+        6,
+        14
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 25,
+    "fields": {
+      "name": "Pierogi with Meat",
+      "description": "Traditional Polish dumplings filled with minced meat and onions.",
+      "calories": 450,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        26,
+        36,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 26,
+    "fields": {
+      "name": "Falafel Wrap",
+      "description": "Middle Eastern chickpea falafel balls wrapped in a soft tortilla with vegetables and tahini sauce.",
+      "calories": 380,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        48,
+        25,
+        32,
+        53
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 27,
+    "fields": {
+      "name": "Salmon Teriyaki",
+      "description": "Grilled salmon glazed with a sweet and savory teriyaki sauce, served with steamed rice.",
+      "calories": 500,
+      "cuisine_type": "as",
+      "veganity": "fish",
+      "ingredients": [
+        46,
+        10,
+        54
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 28,
+    "fields": {
+      "name": "Chicken Alfredo Pasta",
+      "description": "Pasta in a creamy Alfredo sauce with grilled chicken and parmesan cheese.",
+      "calories": 580,
+      "cuisine_type": "it",
+      "veganity": "meat",
+      "ingredients": [
+        63,
+        70,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 29,
+    "fields": {
+      "name": "Shakshuka",
+      "description": "A North African dish of eggs poached in a sauce of tomatoes, chili peppers, and onions.",
+      "calories": 320,
+      "cuisine_type": "fr",
+      "veganity": "vegetarian",
+      "ingredients": [
+        56,
+        41,
+        19,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 30,
+    "fields": {
+      "name": "Pork Schnitzel",
+      "description": "Tenderized pork cutlet, breaded and fried to a golden brown.",
+      "calories": 510,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        56,
+        9,
+        60
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 31,
+    "fields": {
+      "name": "Vegetable Curry",
+      "description": "A spicy mix of vegetables cooked in a fragrant Indian curry sauce.",
+      "calories": 350,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        16,
+        65,
+        42,
+        1
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 32,
+    "fields": {
+      "name": "Shrimp Paella",
+      "description": "Traditional Spanish rice dish with shrimp, bell peppers, and saffron.",
+      "calories": 450,
+      "cuisine_type": "sp",
+      "veganity": "fish",
+      "ingredients": [
+        17,
+        10,
+        74,
+        39
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 33,
+    "fields": {
+      "name": "Bacon and Egg Breakfast Burrito",
+      "description": "A hearty breakfast burrito filled with bacon, scrambled eggs, and cheese.",
+      "calories": 500,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        56,
+        8,
+        48,
+        27
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 34,
+    "fields": {
+      "name": "Pork Ramen",
+      "description": "Rich and flavorful Japanese noodle soup with pork, egg, and vegetables.",
+      "calories": 600,
+      "cuisine_type": "as",
+      "veganity": "meat",
+      "ingredients": [
+        56,
+        9,
+        53,
+        62
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 35,
+    "fields": {
+      "name": "Margherita Flatbread",
+      "description": "A light and crispy flatbread topped with tomato, mozzarella, and basil.",
+      "calories": 300,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        49,
+        34,
+        19,
+        38
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 36,
+    "fields": {
+      "name": "Beef Bulgogi",
+      "description": "Korean dish of marinated beef, grilled and served with rice and vegetables.",
+      "calories": 550,
+      "cuisine_type": "as",
+      "veganity": "meat",
+      "ingredients": [
+        10,
+        12,
+        53,
+        6
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 37,
+    "fields": {
+      "name": "Caprese Salad",
+      "description": "A simple Italian salad with fresh tomatoes, mozzarella, basil, and balsamic glaze.",
+      "calories": 250,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        18,
+        34,
+        19,
+        38
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 38,
+    "fields": {
+      "name": "Chicken Fajitas",
+      "description": "Sizzling chicken strips with peppers and onions, served with tortillas and toppings.",
+      "calories": 400,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        48,
+        74,
+        23,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 39,
+    "fields": {
+      "name": "Vegetarian Borscht",
+      "description": "A traditional Polish beet soup with a variety of vegetables, served with sour cream.",
+      "calories": 200,
+      "cuisine_type": "pl",
+      "veganity": "vegetarian",
+      "ingredients": [
+        16,
+        65,
+        20,
+        71
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 40,
+    "fields": {
+      "name": "Spicy Tuna Roll",
+      "description": "Sushi roll with spicy tuna, cucumber, and avocado, wrapped in seaweed and rice.",
+      "calories": 280,
+      "cuisine_type": "as",
+      "veganity": "fish",
+      "ingredients": [
+        24,
+        10,
+        66,
+        67
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 41,
+    "fields": {
+      "name": "Lentil Soup",
+      "description": "A nutritious soup made with lentils, carrots, and spices.",
+      "calories": 220,
+      "cuisine_type": "fr",
+      "veganity": "vegan",
+      "ingredients": [
+        65,
+        51,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 42,
+    "fields": {
+      "name": "Chicken Pad Thai",
+      "description": "A popular Thai dish with stir-fried rice noodles, chicken, and a tangy tamarind sauce.",
+      "calories": 400,
+      "cuisine_type": "as",
+      "veganity": "meat",
+      "ingredients": [
+        15,
+        55,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 43,
+    "fields": {
+      "name": "Vegetarian Lasagna",
+      "description": "Layers of pasta, ricotta, spinach, and marinara sauce, topped with melted mozzarella.",
+      "calories": 350,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        59,
+        4,
+        70,
+        30
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 44,
+    "fields": {
+      "name": "Beef Tacos",
+      "description": "Seasoned beef in crispy taco shells, topped with lettuce, cheese, and salsa.",
+      "calories": 300,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        28,
+        6,
+        14
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 45,
+    "fields": {
+      "name": "Pierogi with Meat",
+      "description": "Traditional Polish dumplings filled with minced meat and onions.",
+      "calories": 450,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        26,
+        36,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 46,
+    "fields": {
+      "name": "Falafel Wrap",
+      "description": "Middle Eastern chickpea falafel balls wrapped in a soft tortilla with vegetables and tahini sauce.",
+      "calories": 380,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        48,
+        25,
+        32,
+        53
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 47,
+    "fields": {
+      "name": "Salmon Teriyaki",
+      "description": "Grilled salmon glazed with a sweet and savory teriyaki sauce, served with steamed rice.",
+      "calories": 500,
+      "cuisine_type": "as",
+      "veganity": "fish",
+      "ingredients": [
+        46,
+        10,
+        54
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 48,
+    "fields": {
+      "name": "Chicken Alfredo Pasta",
+      "description": "Pasta in a creamy Alfredo sauce with grilled chicken and parmesan cheese.",
+      "calories": 580,
+      "cuisine_type": "it",
+      "veganity": "meat",
+      "ingredients": [
+        63,
+        70,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 49,
+    "fields": {
+      "name": "Shakshuka",
+      "description": "A North African dish of eggs poached in a sauce of tomatoes, chili peppers, and onions.",
+      "calories": 320,
+      "cuisine_type": "fr",
+      "veganity": "vegetarian",
+      "ingredients": [
+        56,
+        41,
+        19,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 50,
+    "fields": {
+      "name": "Pork Schnitzel",
+      "description": "Tenderized pork cutlet, breaded and fried to a golden brown.",
+      "calories": 510,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        56,
+        9,
+        60
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 51,
+    "fields": {
+      "name": "Tomato Bruschetta",
+      "description": "Grilled bread topped with a mixture of diced tomatoes, garlic, and basil.",
+      "calories": 180,
+      "cuisine_type": "it",
+      "veganity": "vegan",
+      "ingredients": [
+        50,
+        19,
+        58,
+        38
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 52,
+    "fields": {
+      "name": "Beef Wellington",
+      "description": "A luxurious dish of beef tenderloin coated with mushroom duxelles and wrapped in puff pastry.",
+      "calories": 750,
+      "cuisine_type": "fr",
+      "veganity": "meat",
+      "ingredients": [
+        75,
+        13,
+        6
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 53,
+    "fields": {
+      "name": "Vegetable Tempura",
+      "description": "Lightly battered and deep-fried assorted vegetables, served with a dipping sauce.",
+      "calories": 300,
+      "cuisine_type": "as",
+      "veganity": "vegan",
+      "ingredients": [
+        72,
+        65,
+        74,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 54,
+    "fields": {
+      "name": "Pesto Pasta Salad",
+      "description": "Cold pasta salad with homemade pesto sauce, cherry tomatoes, and pine nuts.",
+      "calories": 420,
+      "cuisine_type": "it",
+      "veganity": "vegetarian",
+      "ingredients": [
+        64,
+        35,
+        52,
+        70
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 55,
+    "fields": {
+      "name": "Chicken Quesadilla",
+      "description": "Flour tortilla filled with seasoned chicken, cheese, and peppers, grilled to perfection.",
+      "calories": 500,
+      "cuisine_type": "mx",
+      "veganity": "meat",
+      "ingredients": [
+        8,
+        74,
+        48,
+        31
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 56,
+    "fields": {
+      "name": "Salmon Sashimi",
+      "description": "Fresh slices of raw salmon, served with soy sauce and wasabi.",
+      "calories": 200,
+      "cuisine_type": "as",
+      "veganity": "fish",
+      "ingredients": [
+        3,
+        68,
+        54
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 57,
+    "fields": {
+      "name": "Stuffed Cabbage Rolls",
+      "description": "Cabbage leaves filled with a mixture of ground meat, rice, and spices, cooked in tomato sauce.",
+      "calories": 350,
+      "cuisine_type": "pl",
+      "veganity": "meat",
+      "ingredients": [
+        2,
+        10,
+        5,
+        22
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 58,
+    "fields": {
+      "name": "Butternut Squash Soup",
+      "description": "Creamy soup made from pureed butternut squash and spices, garnished with cream.",
+      "calories": 250,
+      "cuisine_type": "fr",
+      "veganity": "vegetarian",
+      "ingredients": [
+        43,
+        61,
+        23
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 59,
+    "fields": {
+      "name": "Pulled Pork Sandwich",
+      "description": "Slow-cooked pulled pork in BBQ sauce, served on a bun with coleslaw.",
+      "calories": 550,
+      "cuisine_type": "us",
+      "veganity": "meat",
+      "ingredients": [
+        9,
+        37,
+        69,
+        57
+      ]
+    }
+  },
+  {
+    "model": "diet_plans.meal",
+    "pk": 60,
+    "fields": {
+      "name": "Veggie Burger",
+      "description": "A hearty patty made from vegetables and beans, served on a bun with lettuce and tomato.",
+      "calories": 400,
+      "cuisine_type": "us",
+      "veganity": "vegan",
+      "ingredients": [
+        19,
+        11,
+        28,
+        37
+      ]
+    }
+  }
+]

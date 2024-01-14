@@ -51,9 +51,7 @@ def create_diet_plan(data):
             diet_plan=diet_plan,
         )
     except DietPlan.DoesNotExist:
-        create_diet_plan.retry(
-            countdown=5, max_retries=3, kwargs={"data": data.to_json()}
-        )
+        create_diet_plan.retry(countdown=5, max_retries=3)
         return
     return
 
