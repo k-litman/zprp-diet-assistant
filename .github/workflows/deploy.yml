@@ -83,7 +83,7 @@ jobs:
           git add ./k8s/celeryworker-deployment.yaml
           git add ./k8s/celerybeat-deployment.yaml
           git commit -m "Update image tags in k8s"
-          git push
+          git push origin HEAD:main
   deploy:
     needs: build-backend
     runs-on: ubuntu-latest
