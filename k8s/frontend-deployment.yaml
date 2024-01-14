@@ -15,7 +15,7 @@ spec:
         app: frontend
     spec:
       containers:
-        - image: ghcr.io/k-litman/zprp-diet-assistant/frontend:sha-371e47e
+        - image: ghcr.io/k-litman/zprp-diet-assistant/frontend:sha-ade614c
           name: frontend
           env:
             - name: VITE_API_URL
