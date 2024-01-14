@@ -137,7 +137,7 @@ jobs:
           git commit -m "Update image tags in k8s"
           git push origin HEAD:main
   deploy:
-    needs: [update-image-tags, build-backend, build-frontend]
+    needs: update-image-tags
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -160,6 +160,3 @@ jobs:
             ./k8s/celeryworker-deployment.yaml
             ./k8s/celerybeat-deployment.yaml
             ./k8s/frontend-deployment.yaml
-          images: |
-            {{needs.build-backend.outputs.tags}}
-            {{needs.build-frontend.outputs.tags}}
