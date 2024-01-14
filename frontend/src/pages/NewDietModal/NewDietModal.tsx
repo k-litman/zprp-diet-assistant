@@ -2,7 +2,6 @@ import React, { useState, useRef } from 'react';
 import { useQueryClient } from 'react-query';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import { capitalize } from 'lodash';
-import { client } from '@/api';
 import axios from 'axios';
 
 interface ErrorResponse {
@@ -45,7 +44,7 @@ const NewDietModal = () => {
         try {
             if (!modalRef || !modalRef.current) return;
 
-            await client.post('/diets/diet-plans/', newDiet, {
+            await axios.post('/api/diets/diet-plans/', newDiet, {
                 headers: { Authorization: `Bearer ${authToken}` },
             });
             queryClient.invalidateQueries('diets');
