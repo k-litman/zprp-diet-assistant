@@ -1,14 +1,13 @@
 import { API_KEYS } from '@/api';
 import NewDietModal from '@/pages/NewDietModal';
-import axios from 'axios';
 import { useQuery } from 'react-query';
 import LoadingPage from '../LoadingPage';
 import { useAppSelector } from '@/hooks/useAppSelector';
 import ErrorPage from '../ErrorPage';
-import { DIET_MOCK } from '@/__mocks__/dietMock';
+import { client } from '@/api';
 
 const fetchDiets = async (token: string) => {
-    const { data } = await axios.get('/api/diets/diet-plans/', {
+    const { data } = await client.get('/diets/diet-plans/', {
         headers: { Authorization: `Bearer ${token}` },
     });
     return data;
@@ -25,7 +24,7 @@ const MyDietsPlansPage = () => {
 
     if (isLoading) return <LoadingPage title="Loading your diets..." />;
 
-    const renderedDiets = DIET_MOCK.map((diet) => (
+    const renderedDiets = diets.results.map((diet) => (
         <div
             key={diet.id}
             className="border-secondary border-solid border-2 rounded mt-3 p-6 w-fit"
