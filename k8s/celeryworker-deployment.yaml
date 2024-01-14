@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: celeryworker
-          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-ade614c
+          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-ed41e78
           command:
             - /start-celeryworker.sh
           ports:

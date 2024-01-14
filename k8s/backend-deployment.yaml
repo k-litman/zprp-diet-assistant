@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: backend
-          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-ade614c
+          image: ghcr.io/k-litman/zprp-diet-assistant/backend:sha-ed41e78
           ports:
             - containerPort: 8000
           resources:
