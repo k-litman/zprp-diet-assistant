@@ -138,7 +138,7 @@ jobs:
           git commit -m "Update image tags in k8s"
           git push
   deploy:
-    needs: update-image-tags
+    needs: [update-image-tags, build-backend, build-frontend]
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
@@ -162,5 +162,5 @@ jobs:
             ./k8s/celerybeat-deployment.yaml
             ./k8s/frontend-deployment.yaml
           images: |
-            ghcr.io/${{ github.repository }}/backend:${{ github.sha }}
-            ghcr.io/${{ github.repository }}/frontend:${{ github.sha }}
+            {{needs.build-backend.outputs.tags}}
+            {{needs.build-frontend.outputs.tags}}
