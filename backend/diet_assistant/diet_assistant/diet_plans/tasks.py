@@ -6,7 +6,7 @@ from typing import Dict, List
 
 from celery import shared_task
 
-from .models import Day, DayMeal, DietPlan, Ingredient, Meal, User
+from .models import Day, DayMeal, DietPlan, Ingredient, Meal
 
 
 @dataclass
