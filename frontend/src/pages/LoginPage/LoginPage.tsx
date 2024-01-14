@@ -16,7 +16,7 @@ interface LoginResponse {
 
 const login = async (userDetails: UserDetails) => {
     const { data } = await client.post<LoginResponse>(
-        '/api/users/login/',
+        '/users/login/',
         userDetails
     );
 

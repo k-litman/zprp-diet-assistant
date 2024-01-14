@@ -45,7 +45,7 @@ const NewDietModal = () => {
         try {
             if (!modalRef || !modalRef.current) return;
 
-            await client.post('/api/diets/diet-plans/', newDiet, {
+            await client.post('/diets/diet-plans/', newDiet, {
                 headers: { Authorization: `Bearer ${authToken}` },
             });
             queryClient.invalidateQueries('diets');
