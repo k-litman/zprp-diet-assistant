@@ -1,3 +1,145 @@
+list_create:
+  post:
+    summary: Create diet plan
+    operationId: create-diet-plan
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/diets.yml#/DietPlan'
+    responses:
+      '201':
+        description: Diet plan created
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/diets.yml#/DietPlan'
+            example:
+              $ref: '../examples/diets.yml#/DietPlanExample'
+      '400':
+        description: Invalid request
+
+  get:
+    summary: List diet plans
+    operationId: list-diet-plans
+    responses:
+      '200':
+        description: Return a list of diet plans
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/diets.yml#/DietPlanList'
+            example:
+              $ref: '../examples/diets.yml#/DietPlanListExample'
+
+replace_meal_in_diet_plan:
+  patch:
+    summary: Replace meal in diet plan
+    operationId: replace-meal-in-diet-plan
+    parameters:
+      - $ref: '../parameters/diet-plan-id.yml#/dietPlanId'
+      - $ref: '../parameters/day-id.yml#/dayId'
+      - $ref: '../parameters/day-meal-id.yml#/dayMealId'
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            $ref: '../schemas/meal-replacement.yml#/MealReplacement'
+    responses:
+      '204':
+        description: Meal replaced successfully
+      '400':
+        description: Invalid request
+      '404':
+        description: Diet plan or meal not found
+
+# Existing diet plan endpoints...
+
+ingredient:
+  get:
+    summary: Get ingredients
+    operationId: get-ingredients
+    responses:
+      '200':
+        description: List of ingredients
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/ingredients.yml#/IngredientList'
+            example:
+              $ref: '../examples/ingredients.yml#/IngredientListExample'
+      '404':
+        description: Ingredients not found
+
+
+meal:
+  get:
+    summary: Get meals
+    operationId: get-meals
+    responses:
+      '200':
+        description: List of meals
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/meals.yml#/MealList'
+            example:
+                $ref: '../examples/meals.yml#/MealListExample'
+      '404':
+        description: Meals not found
+
+
+meal_by_id:
+  get:
+    summary: Get meal details
+    operationId: get-meal-details
+    parameters:
+      - $ref: '../parameters/meal-id.yml#/mealId'
+    responses:
+      '200':
+        description: Meal details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/meals.yml#/Meal'
+            example:
+              $ref: '../examples/meals.yml#/MealExample'
+      '404':
+        description: Meal not found
+
+/diets/diet-plans/{dietPlanId}:
+  get:
+    summary: Get diet plan details
+    operationId: get-diet-plan-details
+    parameters:
+      - $ref: '../parameters/diet-plan-id.yml#/dietPlanId'
+    responses:
+      '200':
+        description: Diet plan details
+        content:
+          application/json:
+            schema:
+              $ref: '../schemas/diets.yml#/DietPlan'
+            example:
+              $ref: '../examples/diets.yml#/DietPlanExample'
+      '404':
+        description: Diet plan not found
+
+
+  delete:
+    summary: Remove diet plan
+    operationId: remove-diet-plan
+    parameters:
+      - $ref: '../parameters/diet-plan-id.yml#/dietPlanId'
+    responses:
+      '204':
+        description: Diet plan successfully deleted
+      '404':
+        description: Diet plan not found
+
+
 #diet_plans:
 #  post:
 #    tags:

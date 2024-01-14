@@ -1,0 +1,34 @@
+MealListExample:
+  count: 60
+  next: null
+  previous: null
+  results:
+    - id: 122
+      name: "Classic Margherita Pizza"
+      description: "A traditional Italian pizza with fresh tomatoes, mozzarella cheese, and basil."
+      calories: 300
+      cuisine_type: "Italian"
+      veganity: "Vegetarian"
+      ingredients:
+        - id: 160
+          name: "Basil"
+        - id: 207
+          name: "Cheese"
+        - id: 224
+          name: "Tomato"
+    # Additional meal examples can be added here
+
+MealExample:
+  id: 122
+  name: "Classic Margherita Pizza"
+  description: "A traditional Italian pizza with fresh tomatoes, mozzarella cheese, and basil."
+  calories: 300
+  cuisine_type: "Italian"
+  veganity: "Vegetarian"
+  ingredients:
+    - id: 160
+      name: "Basil"
+    - id: 207
+      name: "Cheese"
+    - id: 224
+      name: "Tomato"

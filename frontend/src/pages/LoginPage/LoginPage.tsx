@@ -1,9 +1,9 @@
 import React, { useEffect } from 'react';
 import { useMutation } from 'react-query';
-import axios from 'axios';
 import { useAppDispatch } from '@/hooks/useAppDispatch';
 import { setAuthToken, setIsLoggedIn } from '@/store/appSlice';
 import { Link, useNavigate } from 'react-router-dom';
+import { client } from '@/api';
 
 interface UserDetails {
     username: string;
@@ -15,8 +15,8 @@ interface LoginResponse {
 }
 
 const login = async (userDetails: UserDetails) => {
-    const { data } = await axios.post<LoginResponse>(
-        '/api/users/login/',
+    const { data } = await client.post<LoginResponse>(
+        '/users/login/',
         userDetails
     );
 

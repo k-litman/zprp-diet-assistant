@@ -76,3 +76,44 @@ detail_delete:
               $ref: '../schemas/common.yml#/ErrorResponse'
             example:
               $ref: '../examples/common.yml#/ErrorResponseExample'
+login:
+  post:
+    summary: User Login
+    operationId: loginUser
+    requestBody:
+      required: true
+      content:
+        application/json:
+          schema:
+            type: object
+            properties:
+              username:
+                type: string
+              password:
+                type: string
+    responses:
+      '200':
+        description: Successful login
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                token:
+                  type: string
+            examples:
+              loginSuccess:
+                value:
+                  token: "1234567879123456787912345678791234567879"
+      '400':
+        description: Unable to log in with provided credentials.
+
+logout:
+  delete:
+    summary: User Logout
+    operationId: logoutUser
+    responses:
+      '200':
+        description: Successful logout
+      '403':
+        description: Authentication credentials were not provided.

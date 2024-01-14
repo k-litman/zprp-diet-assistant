@@ -1,0 +1,7 @@
+mealId:
+  name: mealId
+  in: path
+  required: true
+  description: The ID of the meal
+  schema:
+    type: integer
