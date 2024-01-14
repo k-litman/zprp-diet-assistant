@@ -1,0 +1,13 @@
+IngredientListExample:
+  count: 77
+  next: null
+  previous: null
+  results:
+    - id: 151
+      name: "Ingredient 1"
+    - id: 152
+      name: "Ingredient 2"
+
+IngredientExample:
+  id: 151
+  name: "Ingredient 1"

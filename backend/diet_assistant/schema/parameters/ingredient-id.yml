@@ -1,0 +1,7 @@
+ingredientId:
+  name: ingredientId
+  in: path
+  required: true
+  description: The ID of the ingredient
+  schema:
+    type: integer
