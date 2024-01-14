@@ -4,7 +4,12 @@ from django.db import models
 
 import factory
 
-from diet_assistant.diet_plans.choices import CuisineType, MealType, Veganity
+from diet_assistant.diet_plans.choices import (
+    CuisineType,
+    DietPlanStatus,
+    MealType,
+    Veganity,
+)
 from diet_assistant.diet_plans.models import Day, DayMeal, DietPlan, Meal
 from diet_assistant.users.tests.factories import UserFactory
 
@@ -20,7 +25,7 @@ class IngredientFactory(factory.django.DjangoModelFactory):
 class DietPlanFactory(factory.django.DjangoModelFactory):
     user = factory.SubFactory(UserFactory)
     name = factory.Sequence(lambda n: f"Diet Plan {n}")
-    generated = True
+    status = DietPlanStatus.PENDING
 
     class Meta:
         model = DietPlan

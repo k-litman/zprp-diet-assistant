@@ -25,3 +25,9 @@ class Veganity(models.TextChoices):
     VEGETARIAN = "vegetarian", _("Vegetarian")
     MEAT = "meat", _("Meat")
     FISH = "fish", _("Fish")
+
+
+class DietPlanStatus(models.TextChoices):
+    PENDING = "pending", _("Pending")
+    GENERATED = "generated", _("Generated")
+    FAILED = "failed", _("Failed")

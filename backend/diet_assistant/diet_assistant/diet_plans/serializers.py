@@ -45,7 +45,8 @@ class DietPlanSerializer(serializers.Serializer):
     id = serializers.IntegerField()
     name = serializers.CharField(max_length=100)
     days = DaySerializer(many=True)
-    generated = serializers.BooleanField()
+    error = serializers.CharField(max_length=100, allow_null=True)
+    status = serializers.CharField(max_length=20)
 
 
 class DietPlanCreateSerializer(serializers.Serializer):

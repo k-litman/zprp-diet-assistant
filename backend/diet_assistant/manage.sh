@@ -114,6 +114,12 @@ case "$cmd" in
     populate)
         populate
     ;;
+    dumpdata)
+        python manage.py dumpdata $args
+    ;;
+    flush)
+        python manage.py flush --no-input
+    ;;
     *)
         echo "Unknown command: $cmd $args"
         exit 1

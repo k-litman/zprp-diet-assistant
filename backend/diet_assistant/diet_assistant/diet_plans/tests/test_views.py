@@ -23,7 +23,7 @@ class TestMealViewSet:
     def test_list_meals(self):
         MealFactory.create_batch(5)
         client = APIClient()
-        url = reverse("meal-list")
+        url = reverse("meals-list")
         response = client.get(url)
         assert response.status_code == status.HTTP_200_OK
         assert response.data["count"] == 5
@@ -36,7 +36,7 @@ class TestMyDietPlansViewSet:
         user = UserFactory()
         client = APIClient()
         client.force_authenticate(user=user)
-        url = reverse("diet-plan-list")
+        url = reverse("diet-plans-list")
         data = {
             "name": "Test Diet Plan",
             "days": 7,
@@ -71,7 +71,7 @@ class TestIngredientsViewSet:
         IngredientFactory(name="Apple")
         IngredientFactory(name="Banana")
         client = APIClient()
-        url = reverse("ingredient-list") + "?name=apple"
+        url = reverse("ingredients-list") + "?name=apple"
         response = client.get(url)
         assert response.status_code == status.HTTP_200_OK
         assert len(response.data["results"]) == 1
