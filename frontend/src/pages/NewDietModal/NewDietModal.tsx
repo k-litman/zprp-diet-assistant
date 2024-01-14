@@ -19,7 +19,7 @@ const NewDietModal = () => {
     const [error, setError] = useState<string>('');
     const [days, setDays] = useState<number>();
     const [mealsPerDay, setMealsPerDay] = useState<number>();
-    const [cuisineType, setCuisineType] = useState<string>('');
+    const [cuisineType, setCuisineType] = useState<string>('it');
     const [isVegan, setIsVegan] = useState<boolean>();
     const [restrictedIngredients, setRestrictedIngredients] = useState<
         string[]
@@ -119,13 +119,19 @@ const NewDietModal = () => {
                             placeholder="Meals per Day"
                             className="input input-bordered w-full max-w-xs"
                         />
-                        <input
-                            type="text"
+                        <select
                             value={cuisineType}
                             onChange={(e) => setCuisineType(e.target.value)}
-                            placeholder="Cuisine Type"
-                            className="input input-bordered w-full max-w-xs"
-                        />
+                            className="select select-bordered w-full max-w-xs"
+                        >
+                            <option value="it">Italian</option>
+                            <option value="pl">Polish</option>
+                            <option value="fr">French</option>
+                            <option value="mx">Mexican</option>
+                            <option value="as">Asian</option>
+                            <option value="sp">Spanish</option>
+                            <option value="us">American</option>
+                        </select>
                         <label className="label cursor-pointer">
                             <span className="label-text">Is Vegan?</span>
                             <input
