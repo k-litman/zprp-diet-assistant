@@ -21,7 +21,7 @@ class Ingredient(models.Model):
 class DietPlan(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE, related_name="diet_plans")
     name = models.CharField(max_length=100)
-    error = models.CharField(max_length=100, null=True)
+    error_message = models.CharField(max_length=100, null=True)
     status = models.CharField(
         max_length=20, choices=DietPlanStatus.choices, default=DietPlanStatus.PENDING
     )
