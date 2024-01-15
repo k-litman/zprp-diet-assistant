@@ -3,7 +3,6 @@
 ## 1. Dokumentacja API
 
 ### 1.1 Uwierzytelnianie
-
 API wykorzystuje system uwierzytelniania oparty na tokenach, aby zapewnić bezpieczny dostęp do niektórych endpointów.
 Po pomyślnym zalogowaniu dla każdej sesji użytkownika generowany jest unikalny token. Token ten powinien być zawarty w
 nagłówkach
@@ -311,16 +310,36 @@ erDiagram
 ```
 
 ## 3. Instrukcja użytkownika
-Całość aplikacji wraz z bazą danych, kolejką zadań celery, serwerem redis oraz frontendem została skonteneryzowana przy użyciu docker-compose.
-Po zainstalowaniu docker oraz docker-compose, należy uruchomić aplikację przy użyciu komendy:
+### 3.1. Backend
+Całość aplikacji wraz z bazą danych, kolejką zadań celery oraz serwerem redis została skonteneryzowana przy użyciu docker-compose.
+Po zainstalowaniu docker oraz docker-compose, po przejściu do folderu `backend`należy uruchomić aplikację przy użyciu komendy:
 ```bash
-docker-compose up --build
+docker-compose up -d --build
 ```
-W przypadku udanego uruchomienia aplikacji, API znajduję się pod adresem *http://0.0.0.0:8000/*, a frontend pod adresem
-*http://127.0.0.1:5713*.
+W przypadku udanego uruchomienia aplikacji, API znajduję się pod adresem *http://localhost:8000/*.
+
+#### 3.1.1. Zapełnienie bazy danych
+Znajdując się w folderze `backend` istnieje możliwość uzupełnienia bazy danych posiłków przykładowymi danymi, aby to zrobić należy wykonać polecenie:
+```bash
+./manage.sh populate
+```
+
+### 3.2. Frontend
+Do uruchomienia frontendu należy zainstalować `node`, a następnie wykonać następujące komendu:
+```bash
+npm install -g yarn
+yarn install
+```
+Frontend uruchamiany jest komendą:
+```bash
+yarn dev
+```
+oraz dostępny jest pod adresem *http://localhost:5173/*.
+
+Aplikacja została również wdrożona na klaster kubernetes i jest dostępna pod adresem *https://zprp.fridaydeployment.com/*, a API jest zlokalizowane pod adresem *https://api.zprp.fridaydeployment.com/*.
 
 W celu łatwiejszego korzystania z API, została przygotowana dokumentacja w formacie OpenAPI, 
-dostępna pod adresem *http://0.0.0.0:8000/docs/* , oraz kolekcja Postman znajdująca się w pliku `ZPRP.postman_collection.json`.
+dostępna pod adresem *http://api.zprp.fridaydeployment.com/docs/* , oraz kolekcja Postman znajdująca się w pliku `backend/ZPRP.postman_collection.json`.
 
 ## 4. Opis testów
 W aplikacji zostały zaimplementowane 3 rodzaje testów:
@@ -341,3 +360,74 @@ python -m locust -f backend/diet_assistant/load_testlocustfile.py
 ```
 Następnie należy przejść do przeglądarki pod adres *http://0.0.0.0:8089/* skąd możemy uruchomić testy wydajnościowe z
 odpowiednimi parametrami. Testy będą losowo wykonywać żądania do API, a wyniki będą wyświetlane na stronie. 
+
+
+## 5. Harmonogram prac
+* 30.10 - 12.11: Przygotowanie struktury bazy danych
+* 13.11 - 19.11: Implementacja algorytmu generowania planu diety.
+* 20.11 - 27.11: Przygotowanie specyfikacji OpenAPI w Swaggerze i mechanizmów zbierania logów
+* 28.11 - 10.12: Implementacja API/frontendu
+* 11.12 - 24.12: Implementacja testów jednostkowych i wydajnościowych
+* 1.01 - 7.01 - Konteneryzacja i wdrożenie produkcyjne
+* 8.01 - 14.01 - Ostania faza testów, oddanie projektu
+
+Projekt został zrealizowany zgodnie z zaplanowanym harmonogramem. Wszystkie cele zostały osiągnięte, a aplikacja działa stabilnie i efektywnie. Integracja różnych technologii przebiegła pomyślnie, a testy potwierdziły wysoką jakość i gotowość produktu do użycia. Wdrożenie na klastrowym środowisku Kubernetes oraz dostępność zarówno frontendu, jak i API przez dedykowane adresy URL pozwala na szybki dostęp do aplikacji. Dokumentacja OpenAPI oraz kolekcja Postman dodatkowo ułatwiają korzystanie z API.
+
+## 6. Napotkane problemy
+W trakcie realizacji projektu napotkaliśmy szereg wyzwań, które wymagały szczegółowej analizy i kreatywnych rozwiązań. Oto niektóre z nich:
+
+### 6.1 Integracja różnych technologii
+Jednym z głównych wyzwań było zintegrowanie różnych technologii i narzędzi, takich jak Django, React, Docker i Kubernetes. Zapewnienie płynnej komunikacji między backendem a frontendem oraz konfiguracja środowiska deweloperskiego wymagała szczegółowego planowania i testowania.
+
+### 6.2 Optymalizacja wydajności
+Osiągnięcie optymalnej wydajności podczas generowania planów dietetycznych było kluczowe. Wymagało to zastosowania zaawansowanych algorytmów i optymalizacji zapytań bazodanowych, aby zapewnić szybkie i efektywne przetwarzanie danych.
+
+### 6.3 Zarządzanie bezpieczeństwem
+Zapewnienie bezpieczeństwa danych użytkowników oraz autoryzacji i uwierzytelniania w API było kluczowym elementem. Wymagało to implementacji solidnych mechanizmów zabezpieczających, w tym szyfrowania haseł i tokenów.
+
+### 6.4 Testowanie i Debugowanie
+Testowanie aplikacji, zarówno w zakresie funkcjonalności jak i wydajności, było skomplikowane i czasochłonne. Napotkane błędy wymagały szczegółowej analizy i debugowania, a także tworzenia kompleksowych scenariuszy testowych.
+
+## 7. Możliwości rozbudowy
+Projekt oferuje szereg możliwości dalszego rozwoju i rozbudowy, które mogą jeszcze bardziej zwiększyć jego wartość dla użytkowników. Oto niektóre z nich:
+
+### 7.1 Rozbudowa algorytmu generowania diet
+Algorytm może zostać rozbudowany o dodatkowe parametry, takie jak preferencje smakowe użytkowników, informacje o alergiach, czy bardziej szczegółowe cele zdrowotne i odżywcze.
+
+### 7.2 Integracja z urządzeniami noszonymi
+Integracja z popularnymi urządzeniami noszonymi i aplikacjami śledzącymi aktywność fizyczną pozwoliłaby na dostosowanie planów dietetycznych do aktualnego poziomu aktywności użytkowników.
+
+### 7.3 Funkcjonalność społecznościowa
+Dodanie funkcji społecznościowych, takich jak grupy wsparcia, udostępnianie planów dietetycznych,
+
+czy współzawodnictwo z innymi użytkownikami, mogłoby zwiększyć zaangażowanie i motywację do przestrzegania diety oraz prowadzenia zdrowego stylu życia.
+
+### 7.4 Personalizacja interfejsu użytkownika
+Rozbudowa interfejsu użytkownika o bardziej zaawansowane opcje personalizacji, umożliwiając użytkownikom dostosowanie wyglądu aplikacji do własnych preferencji, mogłaby poprawić komfort użytkowania.
+
+### 7.5 Rozbudowa bazy danych o więcej składników i posiłków
+Rozszerzenie bazy danych o szerszy wybór składników i posiłków, w tym dania specyficzne dla różnych kultur i kuchni narodowych, pozwoliłoby na stworzenie bardziej zróżnicowanych i ciekawych planów dietetycznych.
+
+### 7.6 Integracja z asystentami głosowymi
+Integracja z popularnymi asystentami głosowymi, takimi jak Alexa czy Google Assistant, mogłaby ułatwić korzystanie z aplikacji, szczególnie dla osób z ograniczeniami ruchowymi.
+
+### 7.7 Wdrożenie mechanizmów sztucznej inteligencji
+Wykorzystanie zaawansowanych technologii AI do analizowania nawyków żywieniowych użytkowników i automatycznego dostosowywania planów dietetycznych mogłoby znacznie zwiększyć skuteczność i personalizację diety.
+
+### 7.8 Moduł edukacyjny
+Dodanie modułu edukacyjnego z artykułami, poradami i przewodnikami dotyczącymi zdrowego odżywiania i stylu życia mógłby stanowić dodatkową wartość dla użytkowników chcących zgłębić swoją wiedzę na te tematy.
+
+### 7.9 Ulepszenia w zakresie UX/UI
+Dalsze ulepszenia w zakresie doświadczeń użytkowników (UX) i interfejsu użytkownika (UI), w tym responsywność aplikacji na różnych urządzeniach, mogłyby przyczynić się do lepszego wrażenia użytkowania.
+
+### 7.10 Rozbudowa funkcjonalności mobilnej
+Rozwój dedykowanej aplikacji mobilnej z dodatkowymi funkcjami, takimi jak powiadomienia o czasie posiłków czy integracja z systemami zdrowotnymi smartfonów, mógłby zwiększyć dostępność i wygodę korzystania z aplikacji.
+
+Każda z tych możliwości rozbudowy niesie ze sobą potencjał do dalszego rozwoju i udoskonalenia projektu, czyniąc go jeszcze bardziej atrakcyjnym i funkcjonalnym dla użytkowników.
+
+
+
+
+
+
+
